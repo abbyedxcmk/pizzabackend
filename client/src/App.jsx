@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Navbar from './components/Navbar';
+import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import Supersellers from './components/Supersellers';
 import Menu from './components/Menu';
@@ -12,7 +12,7 @@ import './App.css'
 function App() {
   return (
     <>
-      <Navbar />
+      <NavBar />
       <Hero />
       <Supersellers />
       <Menu />
