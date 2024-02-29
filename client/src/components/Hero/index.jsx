@@ -1,11 +1,18 @@
 import React from 'react';
 
-function Hero() {
+function HeroSection() {
   return (
-    <>
-      <h1>Hero</h1>
-    </>
-  );
-}
+    <div className="hero-section">
+      {/* Background Image */}
+      <div className="background-image"></div>
 
-export default Hero;
+      {/* Logo */}
+      <img src="/path/to/logo.png" alt="Logo" className="logo" />
+
+      {/* Button */}
+      <button className="cta-button">Get Started</button>
+    </div>
+  );
+};
+
+export default HeroSection;
