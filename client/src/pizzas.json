@@ -1,0 +1,96 @@
+[
+  {
+    "productName": "MARGHERITA",
+    "smPrice": "14",
+    "lgPrice": "24",
+    "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/01.png?raw=true",
+    "ingredients": [
+      "Tomato Sauce",
+      "Fior di Latte Mozzarella",
+      "Fresh Basil",
+      "Olive Oil"
+    ]
+  },
+  {
+    "productName": "FIORENTINA",
+    "smPrice": "14",
+    "lgPrice": "24",
+    "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/02.png?raw=true",
+    "ingredients": [
+      "Tender Stem Broccoli",
+      "Parmesan",
+      "Pine Nuts",
+      "Garlic",
+      "Olive Oil"
+    ]
+  },
+  {
+    "productName": "DIAVOLA",
+    "smPrice": "12",
+    "lgPrice": "22",
+    "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/03.png?raw=true",
+    "ingredients": [
+      "Pepperoni",
+      "Smokey Gyula Pepperoni",
+      "Nduja Sausage"
+    ]
+  },
+  {
+    "productName": "SUPREMA",
+    "smPrice": "16",
+    "lgPrice": "26",
+    "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/04.png?raw=true",
+    "ingredients": [
+      "Beef Rendang",
+      "Green Chilli",
+      "Fresh Coriander",
+      "Olive Oil"
+    ]
+  },
+  {
+    "productName": "CAPRICCIOSA",
+    "smPrice": "16",
+    "lgPrice": "26",
+    "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/05.png?raw=true",
+    "ingredients": [
+      "Sicilian Sausage",
+      "Guindilla Chillies",
+      "Oregano",
+      "Fresh Basil"
+    ]
+  },
+  {
+    "productName": "CINGHIALE",
+    "smPrice": "12",
+    "lgPrice": "22",
+    "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/06.png?raw=true",
+    "ingredients": [
+      "Guindilla Chillies",
+      "Red Onion",
+      "Parmesan",
+      "Garlic Oil"
+    ]
+  },
+  {
+    "productName": "PORTOBELLO",
+    "smPrice": "12",
+    "lgPrice": "22",
+    "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/07.png?raw=true",
+    "ingredients": [
+      "Garlic Roasted Aubergine",
+      "Parmesan Crumb",
+      "Fresh Basil"
+    ]
+  },
+  {
+    "productName": "SYMPLICITY",
+    "smPrice": "12",
+    "lgPrice": "22",
+    "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/08.png?raw=true",
+    "ingredients": [
+      "Pulled Shitake Rendang",
+      "Oregano",
+      "Fresh Coriander"
+    ]
+  }
+]
