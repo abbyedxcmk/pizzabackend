@@ -8,14 +8,16 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function NavBar() {
   return (
     
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="bg-body-tertiary bg-danger">
       <Container fluid>
         <Navbar.Brand href="#home">Slice and Sizzle</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <Nav.Link href="#aboutUs">About Us</Nav.Link>
+            <Nav.Link href="#menu">Menu</Nav.Link>
+            <Nav.Link href="#yourOrder">Your Order</Nav.Link>
+            <Nav.Link href="#reviews">Customer Reviews</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
