@@ -1,0 +1,64 @@
+:root {
+  --color-1: #131313;
+  --color-2: #E7311D;
+  --color-3: #34692B;
+  --color-4: #FFFDF8;
+}
+
+.bg-color-1 {
+  background-color: var(--color-1) !important;
+}
+
+.bg-color-2 {
+  background-color: var(--color-2) !important;
+}
+
+.bg-color-3 {
+  background-color: var(--color-3) !important;
+}
+
+.bg-color-4 {
+  background-color: var(--color-4) !important;
+}
+
+.color-1 {
+  color: var(--color-1) !important;
+}
+
+.color-2 {
+  color: var(--color-2) !important;
+}
+
+.color-3 {
+  color: var(--color-3) !important;
+}
+
+.color-4 {
+  color: var(--color-4) !important;
+}
+
+.bg-dark {
+  background-color: var(--color-1) !important;
+}
+
+.btn-outline-dark {
+  background-color: var(--color-4) !important;
+  border-color: var(--color-1);
+  color: var(--color-1);
+}
+.btn-outline-dark:hover {
+  background-color: var(--color-1) !important;
+  color: var(--color-4);
+}
+
+.border-dark {
+  border-color: var(--color-1) !important;
+}
+
+.pizza-size {
+  color: var(--color-4);
+}
+.pizza-size:hover {
+  color: var(--color-2);
+  cursor: pointer;
+}
