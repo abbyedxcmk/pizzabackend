@@ -52,6 +52,16 @@
   color: var(--color-4);
 }
 
+.btn-paynow {
+  background-color: var(--color-2) !important;
+  color: var(--color-4) !important;
+}
+.btn-paynow:hover {
+  background-color: var(--color-4) !important;
+  border-color: var(--color-2) !important;
+  color: var(--color-2) !important;
+}
+
 .border-dark {
   border-color: var(--color-1) !important;
 }

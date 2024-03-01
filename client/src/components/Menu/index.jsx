@@ -16,7 +16,7 @@ function Menu() {
       </div>
       <div className='row px-5 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4'>
         {pizzas.map((pizza) => (
-          <div className="col my-3"> {/* Use "className" for consistency */}
+          <div className="col my-3" key={pizza.id}>
             <div className="card rounded-3 border border-3 border-dark">
               <div className="card-header border-bottom border-3 border-dark p-4">
                 <img src={pizza.imageUrl} className='img-fluid' alt={pizza.productName} /> {/* Add alt text */}
