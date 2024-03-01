@@ -10,7 +10,7 @@ function Menu() {
   }, []); // Empty dependency array to run the effect only once
 
   return (
-    <div className='container-fluid p-5'>
+    <div className='container-fluid p-5 bg-danger'>
       <div className='row px-5'>
         <h2 className='display-5 mb-5 fw-bold'>Explore Our Menu</h2>
       </div>
