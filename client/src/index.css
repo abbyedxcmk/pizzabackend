@@ -3,6 +3,7 @@
   --color-2: #E7311D;
   --color-3: #34692B;
   --color-4: #FFFDF8;
+  --color-5: #D4D4D4;
 }
 
 .bg-color-1 {
@@ -53,6 +54,10 @@
 
 .border-dark {
   border-color: var(--color-1) !important;
+}
+
+.border-light {
+  border-color: var(--color-5) !important;
 }
 
 .pizza-size {
