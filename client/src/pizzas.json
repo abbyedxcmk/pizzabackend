@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "productName": "MARGHERITA",
     "smPrice": "14",
     "lgPrice": "24",
@@ -12,6 +13,7 @@
     ]
   },
   {
+    "id": 2,
     "productName": "FIORENTINA",
     "smPrice": "14",
     "lgPrice": "24",
@@ -25,6 +27,7 @@
     ]
   },
   {
+    "id": 3,
     "productName": "DIAVOLA",
     "smPrice": "12",
     "lgPrice": "22",
@@ -36,6 +39,7 @@
     ]
   },
   {
+    "id": 4,
     "productName": "SUPREMA",
     "smPrice": "16",
     "lgPrice": "26",
@@ -48,6 +52,7 @@
     ]
   },
   {
+    "id": 5,
     "productName": "CAPRICCIOSA",
     "smPrice": "16",
     "lgPrice": "26",
@@ -60,6 +65,7 @@
     ]
   },
   {
+    "id": 6,
     "productName": "CINGHIALE",
     "smPrice": "12",
     "lgPrice": "22",
@@ -72,6 +78,7 @@
     ]
   },
   {
+    "id": 7,
     "productName": "PORTOBELLO",
     "smPrice": "12",
     "lgPrice": "22",
@@ -83,6 +90,7 @@
     ]
   },
   {
+    "id": 8,
     "productName": "SYMPLICITY",
     "smPrice": "12",
     "lgPrice": "22",
