@@ -9,6 +9,14 @@ function Menu() {
     setPizzas(pizzasData);
   }, []); // Empty dependency array to run the effect only once
 
+  const handleSizeClick = (pizza, priceKey) => {
+    setPizzas((prevPizzas) =>
+      prevPizzas.map((p) =>
+        p.id === pizza.id ? { ...p, selectedPrice: p[priceKey] } : p
+      )
+    );
+  };
+
   return (
     <div className='container-fluid p-5'>
       <div className='row px-5'>
@@ -24,10 +32,22 @@ function Menu() {
               </div>
               <div className="card-body p-4 pb-2 bg-color-1">
                 <div className='d-flex justify-content-between align-items-center'>
-                  <p className="card-title fs-1 fw-bold pricing-card-title color-4">£{pizza.smPrice}</p>
+                  <p className="card-title fs-1 fw-bold pricing-card-title color-4">
+                    £{pizza.selectedPrice || pizza.smPrice}
+                  </p>
                   <div className='d-flex gap-3'>
-                    <p className="card-title fs-6 fw-bold pizza-size">SMALL</p>
-                    <p className="card-title fs-6 fw-bold pizza-size">LARGE</p>
+                    <p
+                      className="card-title fs-6 fw-bold pizza-size"
+                      onClick={() => handleSizeClick(pizza, 'smPrice')}
+                    >
+                      SMALL
+                    </p>
+                    <p
+                      className="card-title fs-6 fw-bold pizza-size"
+                      onClick={() => handleSizeClick(pizza, 'lgPrice')}
+                    >
+                      LARGE
+                    </p>
                   </div>
                 </div>
                 <div className='text-center'>
