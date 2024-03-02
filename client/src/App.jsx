@@ -1,25 +1,15 @@
-import { useState } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Supersellers from "./components/Supersellers";
-import Menu from "./components/Menu";
-import OrderCheckout from "./components/OrderCheckout";
-import Feedbacks from "./components/Feedbacks";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Register from "./components/Register";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Supersellers />
-      <Menu />
-      <OrderCheckout />
-      <Feedbacks />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+      </Routes>
     </>
   );
 }
