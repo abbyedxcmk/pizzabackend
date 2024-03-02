@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import userRoutes from "./routes/userRoutes.js";
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 import { createClient } from "@supabase/supabase-js";
 
@@ -18,6 +19,8 @@ const app = express();
 app.use(express.json());
 
 app.use("/api/users", userRoutes);
+app.use(notFound);
+app.use(errorHandler);
 
 app.get("/", (req, res) => res.send("Server is ready!"));
 
@@ -31,10 +34,3 @@ app.post("/api/register", async (req, res) => {
 });
 
 app.listen(port, () => console.log(`Server started at port ${port}`));
-
-//for users
-// POST ---> Register User /api/users
-// POST ---> Log in /api/users/login
-// POST ---> Logout /api/users/logout
-// POST ---> Store into database
-// GET ----> Show account info /api/users/profile

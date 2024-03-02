@@ -20,7 +20,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("/api/register", users)
+      .post("/api/users", users)
       .then((response) => console.log(response, users))
       .catch((err) => console.log(err));
   };
@@ -28,7 +28,7 @@ function App() {
     <>
       <form onSubmit={handleSubmit}>
         <label>Username</label>
-        <input type="text" name="username" onChange={handleInputChange} />
+        <input type="text" name="email" onChange={handleInputChange} />
         <label>Password</label>
         <input type="password" name="password" onChange={handleInputChange} />
         <button type="submit">Submit</button>
