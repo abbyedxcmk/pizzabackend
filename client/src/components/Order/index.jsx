@@ -3,11 +3,13 @@ import moreIcon from '../../assets/icons/more.png';
 import lessIcon from '../../assets/icons/less.png';
 
 function Order({ orderItems, onUpdateQuantity }) {
-  const handleIncrement = (index) => {
+  const handleIncrement = (event, index) => {
+    event.preventDefault(); // Evita o comportamento padrão do link
     onUpdateQuantity(index, orderItems[index].qty + 1);
   };
 
-  const handleDecrement = (index) => {
+  const handleDecrement = (event, index) => {
+    event.preventDefault(); // Evita o comportamento padrão do link
     onUpdateQuantity(index, orderItems[index].qty - 1);
   };
 
@@ -32,8 +34,8 @@ function Order({ orderItems, onUpdateQuantity }) {
                 <div className='d-flex gap-5'>
                   <div className='d-flex gap-3'>
                     <p className="card-title fs-5 fw-bold pizza-qty-checkout color-2">QTY: <span className='color-1'>{pizza.qty}</span></p>
-                    <a id={`moreQty-${index}`} href="#" onClick={() => handleIncrement(index)}><img src={moreIcon} alt="" /></a>
-                    <a id={`lessQty-${index}`} href="#" onClick={() => handleDecrement(index)}><img src={lessIcon} alt="" /></a>
+                    <a id={`moreQty-${index}`} href="#" onClick={(event) => handleIncrement(event, index)}><img src={moreIcon} alt="" /></a>
+                    <a id={`lessQty-${index}`} href="#" onClick={(event) => handleDecrement(event, index)}><img src={lessIcon} alt="" /></a>
                   </div>
                 </div>
               </div>
