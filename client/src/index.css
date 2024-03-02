@@ -77,3 +77,11 @@
   color: var(--color-2);
   cursor: pointer;
 }
+
+.small-selected {
+  color: var(--color-2);
+}
+
+.large-selected {
+  color: var(--color-2);
+}
