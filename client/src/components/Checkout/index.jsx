@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import homeLess from '../../homeLess.json';
+import customersData from '../../customersData.json';
 import moreIcon from '../../assets/icons/more.png';
 import lessIcon from '../../assets/icons/less.png';
 
@@ -25,7 +25,7 @@ function Checkout({ subtotal, total }) {
     e.preventDefault();
 
     // Find the corresponding data in the JSON file
-    const matchingData = homeLess.find(item => (
+    const matchingData = customersData.find(item => (
       item.firstName === formData.firstName &&
       item.lastName === formData.lastName &&
       item.email === formData.email &&

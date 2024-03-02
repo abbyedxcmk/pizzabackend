@@ -8,6 +8,7 @@ import Checkout from './components/Checkout';
 import Feedbacks from './components/Feedbacks';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CreditCard from './components/CreditCard';
 import './App.css'
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
       <Feedbacks />
       <Contact />
       <Footer />
+      <CreditCard />
     </>
   )
 }
