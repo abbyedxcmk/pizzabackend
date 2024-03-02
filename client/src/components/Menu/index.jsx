@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import pizzasData from '../../pizzas.json';
 
-function Menu() {
+function Menu({ onAddToOrder }) {
   const [pizzas, setPizzas] = useState([]);
   const [selectedPrice, setSelectedPrice] = useState('smPrice'); // Initial selected price is small
 
@@ -20,6 +20,10 @@ function Menu() {
     );
   };
 
+  const handleQuickAdd = (pizza) => {
+    onAddToOrder(pizza);
+  };
+
   return (
     <div className='container-fluid p-5'>
       <div className='row px-5'>
@@ -31,7 +35,13 @@ function Menu() {
             <div className="card rounded-3 border border-3 border-dark">
               <div className="card-header border-bottom border-3 border-dark p-4">
                 <img src={pizza.imageUrl} className='img-fluid' alt={pizza.productName} /> {/* Add alt text */}
-                <button id='quick-add' type="button" className="w-100 p-3 btn btn-lg btn-outline-dark fw-bold">QUICK ADD</button>
+                <button
+                  type="button"
+                  className="w-100 p-3 btn btn-lg btn-outline-dark fw-bold"
+                  onClick={() => handleQuickAdd(pizza)} // Pass the selected pizza to handleQuickAdd
+                >
+                  QUICK ADD
+                </button>
               </div>
               <div className="card-body p-4 pb-2 bg-color-1">
                 <div className='d-flex justify-content-between align-items-center'>
