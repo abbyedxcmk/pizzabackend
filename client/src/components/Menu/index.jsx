@@ -8,20 +8,21 @@ function Menu({ onAddToOrder }) {
   useEffect(() => {
     setPizzas(pizzasData.map(pizza => ({
       ...pizza,
-      selectedPrice: 'smPrice' // Initialize selected price for each pizza
+      selectedPrice: 'smPrice', // Initialize selected price for each pizza
+      selectedSize: 'SMALL' // Initialize selected size for each pizza
     })));
   }, []);
 
-  const handleSizeClick = (pizzaId, priceKey) => {
+  const handleSizeClick = (pizzaId, priceKey, size) => {
     setPizzas(prevPizzas =>
       prevPizzas.map(pizza =>
-        pizza.id === pizzaId ? { ...pizza, selectedPrice: priceKey } : pizza
+        pizza.id === pizzaId ? { ...pizza, selectedPrice: priceKey, selectedSize: size } : pizza
       )
     );
   };
 
   const handleQuickAdd = (pizza) => {
-    onAddToOrder(pizza);
+    onAddToOrder({ ...pizza, size: pizza.selectedSize }); // Pass the selected size along with the pizza
   };
 
   return (
@@ -52,14 +53,14 @@ function Menu({ onAddToOrder }) {
                     <p
                       id={`small-price-${pizza.id}`}
                       className={`card-title fs-6 fw-bold pizza-size smPrice ${pizza.selectedPrice === 'smPrice' ? 'color-2' : ''}`}
-                      onClick={() => handleSizeClick(pizza.id, 'smPrice')}
+                      onClick={() => handleSizeClick(pizza.id, 'smPrice', 'SMALL')}
                     >
                       SMALL
                     </p>
                     <p
                       id={`large-price-${pizza.id}`}
                       className={`card-title fs-6 fw-bold pizza-size lgPrice ${pizza.selectedPrice === 'lgPrice' ? 'color-2' : ''}`}
-                      onClick={() => handleSizeClick(pizza.id, 'lgPrice')}
+                      onClick={() => handleSizeClick(pizza.id, 'lgPrice', 'LARGE')}
                     >
                       LARGE
                     </p>

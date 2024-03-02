@@ -19,11 +19,11 @@ function Order({ orderItems }) {
               <div className='d-flex text-start justify-content-between align-items-start'>
                 <div className=''>
                   <h3 className='fw-bold color-2'>{pizza.productName}</h3>
-                  <p className="card-title fs-6 fw-bold pizza-size-checkout color-2">SIZE: <span className='color-1'>X</span></p>
+                  <p className="card-title fs-6 fw-bold pizza-size-checkout color-2">SIZE: <span className='color-1'>{pizza.selectedSize}</span></p>
                 </div>
                 <div className='d-flex gap-5'>
                   <div className='d-flex gap-3'>
-                    <p className="card-title fs-5 fw-bold pizza-size-checkout color-2">QTY: <span className='color-1'>1</span></p>
+                    <p className="card-title fs-5 fw-bold pizza-qty-checkout color-2">QTY: <span className='color-1'>{pizza.qty}</span></p>
                     <a href=""><img src={moreIcon} alt="" /></a>
                     <a href=""><img src={lessIcon} alt="" /></a>
                   </div>
@@ -31,7 +31,7 @@ function Order({ orderItems }) {
               </div>
               <div className='d-flex justify-content-between text-start'>
                 <p className='fs-5 mt-3 color-1'>{pizza.ingredients.join(', ')}</p>
-                <h3 className='fs-1 fw-bold color-1'>£{pizza.price}</h3>
+                <h3 className='fs-1 fw-bold color-1'>£{pizza[pizza.selectedPrice]}</h3>
               </div>
             </div>
           </div>

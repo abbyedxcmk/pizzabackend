@@ -2,7 +2,9 @@
   {
     "id": 1,
     "productName": "MARGHERITA",
+    "smSize": "Small",
     "smPrice": 14,
+    "lgSize": "Large",
     "lgPrice": 24,
     "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/01.png?raw=true",
     "ingredients": [
@@ -15,7 +17,9 @@
   {
     "id": 2,
     "productName": "FIORENTINA",
+    "smSize": "Small",
     "smPrice": 14,
+    "lgSize": "Large",
     "lgPrice": 24,
     "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/02.png?raw=true",
     "ingredients": [
@@ -29,7 +33,9 @@
   {
     "id": 3,
     "productName": "DIAVOLA",
+    "smSize": "Small",
     "smPrice": 12,
+    "lgSize": "Large",
     "lgPrice": 22,
     "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/03.png?raw=true",
     "ingredients": [
@@ -41,7 +47,9 @@
   {
     "id": 4,
     "productName": "SUPREMA",
+    "smSize": "Small",
     "smPrice": 16,
+    "lgSize": "Large",
     "lgPrice": 26,
     "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/04.png?raw=true",
     "ingredients": [
@@ -55,6 +63,7 @@
     "id": 5,
     "productName": "CAPRICCIOSA",
     "smPrice": 16,
+    "lgSize": "Large",
     "lgPrice": 26,
     "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/05.png?raw=true",
     "ingredients": [
@@ -67,7 +76,9 @@
   {
     "id": 6,
     "productName": "CINGHIALE",
+    "smSize": "Small",
     "smPrice": 12,
+    "lgSize": "Large",
     "lgPrice": 22,
     "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/06.png?raw=true",
     "ingredients": [
@@ -80,7 +91,9 @@
   {
     "id": 7,
     "productName": "PORTOBELLO",
+    "smSize": "Small",
     "smPrice": 12,
+    "lgSize": "Large",
     "lgPrice": 22,
     "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/07.png?raw=true",
     "ingredients": [
@@ -92,7 +105,9 @@
   {
     "id": 8,
     "productName": "SYMPLICITY",
+    "smSize": "Small",
     "smPrice": 12,
+    "lgSize": "Large",
     "lgPrice": 22,
     "imageUrl": "https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/08.png?raw=true",
     "ingredients": [
