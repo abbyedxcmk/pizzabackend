@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "qty": 1,
     "productName": "MARGHERITA",
     "smSize": "Small",
     "smPrice": 14,
@@ -16,6 +17,7 @@
   },
   {
     "id": 2,
+    "qty": 1,
     "productName": "FIORENTINA",
     "smSize": "Small",
     "smPrice": 14,
@@ -32,6 +34,7 @@
   },
   {
     "id": 3,
+    "qty": 1,
     "productName": "DIAVOLA",
     "smSize": "Small",
     "smPrice": 12,
@@ -46,6 +49,7 @@
   },
   {
     "id": 4,
+    "qty": 1,
     "productName": "SUPREMA",
     "smSize": "Small",
     "smPrice": 16,
@@ -61,6 +65,7 @@
   },
   {
     "id": 5,
+    "qty": 1,
     "productName": "CAPRICCIOSA",
     "smPrice": 16,
     "lgSize": "Large",
@@ -75,6 +80,7 @@
   },
   {
     "id": 6,
+    "qty": 1,
     "productName": "CINGHIALE",
     "smSize": "Small",
     "smPrice": 12,
@@ -90,6 +96,7 @@
   },
   {
     "id": 7,
+    "qty": 1,
     "productName": "PORTOBELLO",
     "smSize": "Small",
     "smPrice": 12,
@@ -104,6 +111,7 @@
   },
   {
     "id": 8,
+    "qty": 1,
     "productName": "SYMPLICITY",
     "smSize": "Small",
     "smPrice": 12,

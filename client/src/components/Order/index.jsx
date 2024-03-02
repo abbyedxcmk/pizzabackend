@@ -2,7 +2,15 @@ import React from 'react';
 import moreIcon from '../../assets/icons/more.png';
 import lessIcon from '../../assets/icons/less.png';
 
-function Order({ orderItems }) {
+function Order({ orderItems, onUpdateQuantity }) {
+  const handleIncrement = (index) => {
+    onUpdateQuantity(index, orderItems[index].qty + 1);
+  };
+
+  const handleDecrement = (index) => {
+    onUpdateQuantity(index, orderItems[index].qty - 1);
+  };
+
   return (
     <div className='container-fluid ps-5 py-5'>
       <div className='row ps-5'>
@@ -13,7 +21,7 @@ function Order({ orderItems }) {
         <div className="col my-3" key={index}>
           <div className="card d-flex flex-row rounded-3 border border-3 border-dark">
             <div className="card-header border-end border-3 border-dark p-4">
-              <img src='https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/08.png?raw=true' className='img-fluid' width={120} alt='' />
+              <img src={pizza.imageUrl} className='img-fluid' width={120} alt='' />
             </div>
             <div className="card-body p-4 pb-2 border-dark">
               <div className='d-flex text-start justify-content-between align-items-start'>
@@ -24,8 +32,8 @@ function Order({ orderItems }) {
                 <div className='d-flex gap-5'>
                   <div className='d-flex gap-3'>
                     <p className="card-title fs-5 fw-bold pizza-qty-checkout color-2">QTY: <span className='color-1'>{pizza.qty}</span></p>
-                    <a href=""><img src={moreIcon} alt="" /></a>
-                    <a href=""><img src={lessIcon} alt="" /></a>
+                    <a id={`moreQty-${index}`} href="#" onClick={() => handleIncrement(index)}><img src={moreIcon} alt="" /></a>
+                    <a id={`lessQty-${index}`} href="#" onClick={() => handleDecrement(index)}><img src={lessIcon} alt="" /></a>
                   </div>
                 </div>
               </div>
