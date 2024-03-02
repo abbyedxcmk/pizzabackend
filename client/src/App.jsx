@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Supersellers from './components/Supersellers';
-import Menu from './components/Menu';
-import OrderCheckout from './components/OrderCheckout';
-import Feedbacks from './components/Feedbacks';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import './App.css'
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Supersellers from "./components/Supersellers";
+import Menu from "./components/Menu";
+import OrderCheckout from "./components/OrderCheckout";
+import Feedbacks from "./components/Feedbacks";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
       <Contact />
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
