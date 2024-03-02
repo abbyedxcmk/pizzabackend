@@ -1,5 +1,6 @@
 import { db } from "../database/DBclient.js";
 import bcrypt from "bcrypt";
+import generateToken from "../utils/generateToken.js";
 
 //authenticate user
 //route POST /api/users/login
@@ -26,6 +27,8 @@ const Login = async (req, res) => {
   if (data.length != 1 || !pass) {
     res.status(403);
     throw new Error("Invalid username or password");
+  } else {
+    generateToken(res, data[0].id);
   }
   res.status(200).json({ message: "User logged in!" });
 };
@@ -59,6 +62,10 @@ const Register = async (req, res) => {
 
 // POST ---> Logout /api/users/logout
 const Logout = (req, res) => {
+  res.cookie("jwt", "", {
+    httpOnly: true,
+    expires: new Date(0),
+  });
   res.status(200).json({ message: "User logged out!" });
 };
 
