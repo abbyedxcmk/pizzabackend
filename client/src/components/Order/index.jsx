@@ -4,12 +4,12 @@ import lessIcon from '../../assets/icons/less.png';
 
 function Order({ orderItems, onUpdateQuantity }) {
   const handleIncrement = (event, index) => {
-    event.preventDefault(); // Evita o comportamento padrão do link
+    event.preventDefault(); // Avoid default link behavior
     onUpdateQuantity(index, orderItems[index].qty + 1);
   };
 
   const handleDecrement = (event, index) => {
-    event.preventDefault(); // Evita o comportamento padrão do link
+    event.preventDefault(); // Avoid default link behavior
     onUpdateQuantity(index, orderItems[index].qty - 1);
   };
 
