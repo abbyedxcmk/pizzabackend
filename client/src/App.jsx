@@ -9,7 +9,12 @@ import Feedbacks from './components/Feedbacks';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CreditCard from './components/CreditCard';
-import './App.css'
+
+// import Register from "./components/Register";
+// import { Route, Routes } from "react-router-dom";
+// import Home from "./components/Home";
+// import Login from "./components/Login";
+import "./App.css";
 
 function App() {
   const [orderItems, setOrderItems] = useState([]);
@@ -60,6 +65,11 @@ function App() {
       <Contact />
       <Footer />
       <CreditCard />
+      {/* <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+      </Routes> */}
     </>
   )
 }
