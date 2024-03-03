@@ -40,6 +40,10 @@ const Login = async (req, res, next) => {
 const Register = async (req, res, next) => {
   const { email, password } = req.body;
   try {
+    if (!email || !password) {
+      res.status(403);
+      throw new Error("Please enter an email and password");
+    }
     //check if user already exists
     let { data, error } = await db.from("User").select("*");
     for (let user of data) {
