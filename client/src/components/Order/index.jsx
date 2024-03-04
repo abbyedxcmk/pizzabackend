@@ -10,7 +10,8 @@ function Order({ orderItems, onUpdateQuantity }) {
 
   const handleDecrement = (event, index) => {
     event.preventDefault(); // Avoid default link behavior
-    onUpdateQuantity(index, orderItems[index].qty - 1);
+    const newQty = Math.max(0, orderItems[index].qty - 1); // Ensures quantity is not less than zero
+    onUpdateQuantity(index, newQty);
   };
 
   return (
