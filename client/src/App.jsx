@@ -1,59 +1,59 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Supersellers from './components/Supersellers';
-import Menu from './components/Menu';
-import Order from './components/Order';
-import Checkout from './components/Checkout';
-import Feedbacks from './components/Feedbacks';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import CreditCard from './components/CreditCard';
+// import { useState } from 'react'
+// import Navbar from './components/NavBar';
+// import Hero from './components/Hero';
+// import Supersellers from './components/Supersellers';
+// import Menu from './components/Menu';
+// import Order from './components/Order';
+// import Checkout from './components/Checkout';
+// import Feedbacks from './components/Feedbacks';
+// import Contact from './components/Contact';
+// import Footer from './components/Footer';
+// import CreditCard from './components/CreditCard';
 
-// import Register from "./components/Register";
-// import { Route, Routes } from "react-router-dom";
-// import Home from "./components/Home";
-// import Login from "./components/Login";
+import Register from "./components/Register";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Login from "./components/Login";
 import "./App.css";
 
 function App() {
-  const [orderItems, setOrderItems] = useState([]);
+  // const [orderItems, setOrderItems] = useState([]);
 
-  // Function to add a pizza to the order
-  const addToOrder = (pizza) => {
-    setOrderItems([...orderItems, { ...pizza, qty: 1 }]);
-  };
+  // // Function to add a pizza to the order
+  // const addToOrder = (pizza) => {
+  //   setOrderItems([...orderItems, { ...pizza, qty: 1 }]);
+  // };
 
-  // Function to update the quantity of a pizza in the order
-  const updateQuantity = (index, newQuantity) => {
-    const updatedOrderItems = [...orderItems];
-    updatedOrderItems[index].qty = newQuantity;
-    setOrderItems(updatedOrderItems);
-  };
+  // // Function to update the quantity of a pizza in the order
+  // const updateQuantity = (index, newQuantity) => {
+  //   const updatedOrderItems = [...orderItems];
+  //   updatedOrderItems[index].qty = newQuantity;
+  //   setOrderItems(updatedOrderItems);
+  // };
 
-  // Function to calculate order subtotal
-  const calculateSubtotal = () => {
-    let subtotal = 0;
-    orderItems.forEach(pizza => {
-      subtotal += parseFloat(pizza[pizza.selectedPrice]) * pizza.qty;
-    });
-    return subtotal.toFixed(2);
-  };
+  // // Function to calculate order subtotal
+  // const calculateSubtotal = () => {
+  //   let subtotal = 0;
+  //   orderItems.forEach(pizza => {
+  //     subtotal += parseFloat(pizza[pizza.selectedPrice]) * pizza.qty;
+  //   });
+  //   return subtotal.toFixed(2);
+  // };
 
-  // Function to calculate the order subtotal and delivery fee
-  const calculateTotal = () => {
-    let subtotal = 0;
-    orderItems.forEach(pizza => {
-      subtotal += parseFloat(pizza[pizza.selectedPrice]) * pizza.qty;
-    });
-    const deliveryFee = 2.5; // Defina sua taxa de entrega aqui
-    const total = subtotal + deliveryFee;
-    return { subtotal: subtotal.toFixed(2), total: total.toFixed(2) };
-  };
+  // // Function to calculate the order subtotal and delivery fee
+  // const calculateTotal = () => {
+  //   let subtotal = 0;
+  //   orderItems.forEach(pizza => {
+  //     subtotal += parseFloat(pizza[pizza.selectedPrice]) * pizza.qty;
+  //   });
+  //   const deliveryFee = 2.5; // Defina sua taxa de entrega aqui
+  //   const total = subtotal + deliveryFee;
+  //   return { subtotal: subtotal.toFixed(2), total: total.toFixed(2) };
+  // };
   
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Hero />
       <Supersellers />
       <Menu onAddToOrder={addToOrder} />
@@ -64,12 +64,12 @@ function App() {
       <Feedbacks />
       <Contact />
       <Footer />
-      <CreditCard />
-      {/* <Routes>
+      <CreditCard /> */}
+      <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/login" element={<Login />}></Route>
-      </Routes> */}
+      </Routes>
     </>
   );
 }

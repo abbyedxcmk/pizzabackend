@@ -39,9 +39,9 @@ function Checkout({ subtotal, total }) {
 
     // If data matches, display an alert
     if (matchingData) {
-      alert('Os dados estão corretos!');
+      alert('The data is correct!');
     } else {
-      alert('Os dados estão incorretos.');
+      alert('The data is incorrect.');
     }
   };
 
