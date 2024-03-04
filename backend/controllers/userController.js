@@ -6,69 +6,58 @@ import generateToken from "../utils/generateToken.js";
 //route POST /api/users/login
 const Login = async (req, res, next) => {
   const { email, password } = req.body;
-  try {
-    //check for email
-    if (!email) {
-      res.status(403);
-      throw new Error("Please enter your email");
-    }
-    //check for password
-    if (!password) {
-      res.status(403);
-      throw new Error("Please enter your password");
-    }
-    //check db for email
-    const { data, error } = await db
-      .from("User")
-      .select("*")
-      .eq("email", email);
-
-    //check username exists and password is correct
-    if (data.length != 1 || !bcrypt.compare(password, data[0].password)) {
-      res.status(403);
-      throw new Error("Invalid username or password");
-    } else {
-      generateToken(res, data[0].id);
-    }
-    res.status(200).json({ message: "User logged in!" });
-  } catch (error) {
-    next(error);
+  //check for email
+  if (!email) {
+    res.status(403);
+    throw new Error("Please enter your email");
   }
+  //check for password
+  if (!password) {
+    res.status(403);
+    throw new Error("Please enter your password");
+  }
+  //check db for email
+  const { data, error } = await db.from("User").select("*").eq("email", email);
+
+  //check username exists and password is correct
+  if (data.length != 1 || !bcrypt.compare(password, data[0].password)) {
+    res.status(403);
+    throw new Error("Invalid username or password");
+  } else {
+    generateToken(res, data[0].id);
+  }
+  res.status(200).json({ message: "User logged in!" });
 };
 
 // POST ---> Register User /api/users
 const Register = async (req, res, next) => {
   const { email, password } = req.body;
-  try {
-    if (!email || !password) {
-      res.status(403);
-      throw new Error("Please enter an email and password");
-    }
-    //check if user already exists
-    let { data, error } = await db.from("User").select("*");
-    for (let user of data) {
-      console.log(user.email);
-      if (user.email === email) {
-        res.status(400);
-        throw new Error("User already exists!");
-      }
-    }
-
-    //if it does not exists add user to database
-    await db
-      .from("User")
-      .insert([
-        {
-          email: email,
-          password: await bcrypt.hash(password, 10),
-        },
-      ])
-      .select();
-
-    res.status(200).json({ message: "User registered!" });
-  } catch (error) {
-    next(error);
+  if (!email || !password) {
+    res.status(403);
+    throw new Error("Please enter an email and password");
   }
+  //check if user already exists
+  let { data, error } = await db.from("User").select("*");
+  for (let user of data) {
+    console.log(user.email);
+    if (user.email === email) {
+      res.status(400);
+      throw new Error("User already exists!");
+    }
+  }
+
+  //if it does not exists add user to database
+  await db
+    .from("User")
+    .insert([
+      {
+        email: email,
+        password: await bcrypt.hash(password, 10),
+      },
+    ])
+    .select();
+
+  res.status(200).json({ message: "User registered!" });
 };
 
 // POST ---> Logout /api/users/logout
