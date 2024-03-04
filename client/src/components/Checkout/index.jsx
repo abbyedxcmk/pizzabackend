@@ -46,11 +46,11 @@ function Checkout({ subtotal, total }) {
   };
 
   return (
-    <div className='container-fluid pe-5 py-5'>
-      <div className='row pe-5'>
-        <h2 className='display-5 mb-5 fw-bold'>Checkout</h2>
+    <div className='container-fluid px-5 py-5'>
+      <div className='row mb-4'>
+        <h2 className='display-5 fw-bold'>Checkout</h2>
       </div>
-      <div className='row pe-5 row-cols-1'>
+      <div className='row row-cols-1'>
         <div className="col my-3">
           <div className="card d-flex flex-row rounded-3 border border-3 border-dark">
             <div className="card-body p-4 pb-2 border-dark">
@@ -115,7 +115,7 @@ function Checkout({ subtotal, total }) {
                 </div>
 
                 <h3 className='fw-bold mb-3 color-2'>PAYMENT</h3>
-                <div className='d-flex gap-5 justify-content-between'>
+                <div className='d-flex gap-3 justify-content-between'>
                   <div className='col-6 d-flex flex-column'>
                     <label for="ccNumber" className="form-label fs-5 mt-3 color-1">Credit Card Number</label>
                     <input type="text" className="border border-3 border-dark form-control" id="ccNumber" value={formData.ccNumber} onChange={handleInputChange} placeholder="0120 0230 0340 0540" required></input>
