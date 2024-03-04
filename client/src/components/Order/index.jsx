@@ -10,18 +10,19 @@ function Order({ orderItems, onUpdateQuantity }) {
 
   const handleDecrement = (event, index) => {
     event.preventDefault(); // Avoid default link behavior
-    onUpdateQuantity(index, orderItems[index].qty - 1);
+    const newQty = Math.max(0, orderItems[index].qty - 1); // Ensures quantity is not less than zero
+    onUpdateQuantity(index, newQty);
   };
 
   return (
-    <div className='container-fluid ps-5 py-5'>
-      <div className='row ps-5'>
-        <h2 className='display-5 mb-5 fw-bold'>Your Order</h2>
+    <div className='container-fluid px-5 py-5'>
+      <div className='row mb-4 ps-md-5 ps-lg-0'>
+        <h2 className='display-5 fw-bold'>Your Order</h2>
       </div>
-      <div className='row ps-5 row-cols-1'>
+      <div className='row px-md-5 px-lg-0 row-cols-1'>
         {orderItems.map((pizza, index) => (
         <div className="col my-3" key={index}>
-          <div className="card d-flex flex-row rounded-3 border border-3 border-dark">
+          <div className="card d-flex flex-md-row flex-lg-column flex-xl-row rounded-3 border border-3 border-dark">
             <div className="card-header border-end border-3 border-dark p-4">
               <img src={pizza.imageUrl} className='img-fluid' width={120} alt='' />
             </div>
@@ -39,7 +40,7 @@ function Order({ orderItems, onUpdateQuantity }) {
                   </div>
                 </div>
               </div>
-              <div className='d-flex justify-content-between text-start'>
+              <div className='d-flex flex- justify-content-between text-start'>
                 <p className='fs-5 mt-3 color-1'>{pizza.ingredients.join(', ')}</p>
                 <h3 className='fs-1 fw-bold color-1'>£{pizza[pizza.selectedPrice]}</h3>
               </div>
