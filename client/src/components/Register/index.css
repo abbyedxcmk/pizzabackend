@@ -1,4 +1,22 @@
-.registerForm {
-    height: 80vh;
+.registerForm { 
     width:40%;
+
+    .logo {
+        width:190px;
+        height: 180px;
+    }
+}
+
+.registerBtn {
+    text-align: start;
+
+    &:hover {
+        filter: brightness(80%);
+    }
+}
+
+.registerImg {
+    width:55%;
+    object-fit:cover;
+    /*height: 45em;*/
 }
