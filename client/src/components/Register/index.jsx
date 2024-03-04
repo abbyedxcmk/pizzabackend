@@ -7,6 +7,13 @@ import Row from "react-bootstrap/Row";
 import NavBar from "../NavBar";
 import { useState } from "react";
 import axios from "axios";
+import "../../index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Image from "react-bootstrap/Image";
+import registerImg from "../../assets/registerImg.png";
+import logo from "../../assets/OP-1.png";
 
 const Register = () => {
   const [users, setUsers] = useState({
@@ -33,11 +40,9 @@ const Register = () => {
   return (
     <>
       <NavBar></NavBar>
-      <Container className="w-75 my-5 bg-secondary rounded">
-        <Form
-          className="p-4 rounded vh-50 registerForm"
-          onSubmit={handleSubmit}
-        >
+      <Container className="w-75 my-5 bg-secondary rounded bg-color-4 shadow position-relative d-flex justify-content-between px-0">
+        <Form className="p-4 rounded registerForm" onSubmit={handleSubmit}>
+          <Image src={logo} className="logo"></Image>
           <Form.Group controlId="formEmail" className="mb-3">
             <h1 className="mb-5">Create an Account</h1>
             <Form.Label>Email</Form.Label>
@@ -67,15 +72,22 @@ const Register = () => {
               onChange={handleInputChange}
             ></Form.Control>
           </Form.Group>
-          <Button variant="primary" type="submit" className="w-100 mb-5">
-            Register
+          <Button
+            variant="primary"
+            type="submit"
+            className="w-100 mb-5 bg-color-2 registerBtn"
+          >
+            Create Account
+            <FontAwesomeIcon icon={faArrowRight} className="float-end" />
           </Button>
           <Row>
             <Col className="col-8">
               <p>Already have an account?</p>
             </Col>
             <Col className="col-4">
-              <a>Log in</a>
+              <a as={Link} to="/login">
+                Log in
+              </a>
             </Col>
           </Row>
           <Row>
@@ -87,6 +99,7 @@ const Register = () => {
             </Col>
           </Row>
         </Form>
+        <Image src={registerImg} className="registerImg rounded"></Image>
       </Container>
     </>
   );
