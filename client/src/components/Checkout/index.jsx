@@ -47,10 +47,10 @@ function Checkout({ subtotal, total }) {
 
   return (
     <div className='container-fluid px-5 py-5'>
-      <div className='row mb-4'>
+      <div className='row mb-4 ps-md-5 ps-lg-0'>
         <h2 className='display-5 fw-bold'>Checkout</h2>
       </div>
-      <div className='row row-cols-1'>
+      <div className='row px-md-5 px-lg-0 row-cols-1'>
         <div className="col my-3">
           <div className="card d-flex flex-row rounded-3 border border-3 border-dark">
             <div className="card-body p-4 pb-2 border-dark">

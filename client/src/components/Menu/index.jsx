@@ -27,10 +27,10 @@ function Menu({ onAddToOrder }) {
 
   return (
     <div className='container-fluid p-5 bg-color-2'>
-      <div className='row mb-4 ps-md-5'>
+      <div className='row mb-4 ps-md-5 ps-lg-0'>
         <h2 className='display-5 color-4 fw-bold'>Explore Our Menu</h2>
       </div>
-      <div className='row px-md-5 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4'>
+      <div className='row px-md-5 px-lg-0 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4'>
         {pizzas.map((pizza) => (
           <div className="col py-3" key={pizza.id}>
             <div className="card rounded-3 border border-3 border-dark">

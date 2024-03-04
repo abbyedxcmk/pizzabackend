@@ -15,10 +15,10 @@ function Order({ orderItems, onUpdateQuantity }) {
 
   return (
     <div className='container-fluid px-5 py-5'>
-      <div className='row mb-4'>
+      <div className='row mb-4 ps-md-5 ps-lg-0'>
         <h2 className='display-5 fw-bold'>Your Order</h2>
       </div>
-      <div className='row row-cols-1'>
+      <div className='row px-md-5 px-lg-0 row-cols-1'>
         {orderItems.map((pizza, index) => (
         <div className="col my-3" key={index}>
           <div className="card d-flex flex-md-row flex-lg-column flex-xl-row rounded-3 border border-3 border-dark">
