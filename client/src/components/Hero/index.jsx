@@ -5,6 +5,7 @@ import logo from "../../assets/Logo/OP-1-removebg-preview.png";
 
 function App() {
   return (
+  
     <div className="w-screen h-screen text-white" style={{
       background: `url(${pizzaslices}) center/cover no-repeat`, // Set background image
     }} >
@@ -14,7 +15,7 @@ function App() {
           </img>
           <div className="flex justify-center mx-auto">
             <button
-              className="hover:underline bg-danger text-white font-bold rounded-full  py-4 px-8">
+              className="bg-danger text-white font-bold rounded-full  py-4 px-8">
               See our full menu
             </button>
           </div>
