@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import NavBar from "../NavBar";
+import Navbar from "../Navbar";
 import { useState } from "react";
 import axios from "axios";
 import "../../index.css";
@@ -39,7 +39,7 @@ const Register = () => {
   };
   return (
     <>
-      <NavBar></NavBar>
+      <Navbar/>
       <Container className="w-75 my-5 bg-secondary rounded bg-color-4 shadow position-relative d-flex justify-content-between px-0">
         <Form className="p-4 rounded registerForm" onSubmit={handleSubmit}>
           <Image src={logo} className="logo"></Image>

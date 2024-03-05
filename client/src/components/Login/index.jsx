@@ -1,4 +1,4 @@
-import NavBar from "../NavBar";
+import NavBar from "../Navbar";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
 import Container from "react-bootstrap/esm/Container";
