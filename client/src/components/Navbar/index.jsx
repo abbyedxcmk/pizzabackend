@@ -12,7 +12,7 @@ import menu from "../Menu"
 function NavBar(){
   return (
     
-    <Navbar expand="lg" className="bg-body-tertiary bg-danger">
+    <Navbar expand="lg" className="bg-body-tertiary py-3">
       <Container fluid>
         <Navbar.Brand href="#home" className="text-light">Slice and Sizzle</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
