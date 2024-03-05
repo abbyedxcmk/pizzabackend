@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     
-    <Navbar expand="lg" className="bg-body-tertiary bg-danger">
+    <Navbar expand="lg" className="bg-body-tertiary py-3">
       <Container fluid>
         <Navbar.Brand as={Link} to="/" className="text-light">Slice and Sizzle</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
