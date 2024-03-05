@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Hero/index.css';
-import pizzaslices from "../../assets/Heroimage/pizza-slices.jpg";
+import pizzaslices from "../../assets/Heroimage/pizza-hero-2.jpeg";
 import logo from "../../assets/Logo/OP-1-removebg-preview.png";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <div className="flex justify-center mx-auto">
             <button
               className="bg-danger text-white font-bold rounded-full  py-4 px-8">
-              See our full menu
+              See Our Full Menu
             </button>
           </div>
         </div>
