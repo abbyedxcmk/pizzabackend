@@ -4,6 +4,7 @@
   --color-3: #34692B;
   --color-4: #FFFDF8;
   --color-5: #D4D4D4;
+  --color-6: #22E8C5;
 }
 
 .bg-color-1 {
@@ -22,6 +23,10 @@
   background-color: var(--color-4) !important;
 }
 
+.bg-card {
+  background-image: url({cardBackground});
+}
+
 .color-1 {
   color: var(--color-1) !important;
 }
@@ -38,6 +43,14 @@
   color: var(--color-4) !important;
 }
 
+.color-5 {
+  color: var(--color-5) !important;
+}
+
+.color-6 {
+  color: var(--color-6) !important;
+}
+
 .bg-dark {
   background-color: var(--color-1) !important;
 }
@@ -50,6 +63,16 @@
 .btn-outline-dark:hover {
   background-color: var(--color-1) !important;
   color: var(--color-4);
+}
+
+.btn-paynow {
+  background-color: var(--color-2) !important;
+  color: var(--color-4) !important;
+}
+.btn-paynow:hover {
+  background-color: var(--color-4) !important;
+  border-color: var(--color-2) !important;
+  color: var(--color-2) !important;
 }
 
 .border-dark {
@@ -66,4 +89,16 @@
 .pizza-size:hover {
   color: var(--color-2);
   cursor: pointer;
+}
+
+.small-selected {
+  color: var(--color-2);
+}
+
+.large-selected {
+  color: var(--color-2);
+}
+
+#credit-card {
+  max-width: 35rem;
 }
