@@ -10,6 +10,7 @@ const Feedbacks = () => {
   ];
 
   return (
+
     <div className="feedbacks-container">
       <h2>Customer Feedbacks</h2>
       <ul className="feedbacks-list">
@@ -21,6 +22,7 @@ const Feedbacks = () => {
         ))}
       </ul>
     </div>
+
   );
 };
 
