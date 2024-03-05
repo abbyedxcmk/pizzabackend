@@ -18,9 +18,9 @@ function NavBar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="#Supersellers" className="text-light">Supersellers</Nav.Link>
-            <Nav.Link href="#menu" className="text-light">Menu</Nav.Link>
-            <Nav.Link href="#yourOrder" className="text-light">Your Order</Nav.Link>
-            <Nav.Link href="#reviews" className="text-light">Customer Reviews</Nav.Link>
+            <Nav.Link href="#Menu" className="text-light">Menu</Nav.Link>
+            <Nav.Link href="#Order" className="text-light">Order</Nav.Link>
+            <Nav.Link href="#Feedback" className="text-light">Reviews</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

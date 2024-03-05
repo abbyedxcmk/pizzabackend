@@ -3,7 +3,7 @@ import React from 'react';
 function Feedbacks() {
   return (
     <>
-      <h1>Feedbacks</h1>
+      <h1 id="Feedback">Feedbacks</h1>
     </>
   );
 }
