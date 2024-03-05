@@ -1,5 +1,8 @@
 import React from 'react';
-import './index.css';
+
+import '../Navbar/index.css';
+
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
