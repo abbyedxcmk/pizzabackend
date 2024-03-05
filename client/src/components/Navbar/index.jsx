@@ -13,7 +13,7 @@ function NavBar() {
     
     <Navbar expand="lg" className="bg-body-tertiary py-3">
       <Container fluid>
-        <Navbar.Brand as={Link} to="/" className="text-light">Slice and Sizzle</Navbar.Brand>
+        <Navbar.Brand href="#Hero" className="text-light">Slice and Sizzle</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">

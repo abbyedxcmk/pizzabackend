@@ -7,7 +7,7 @@ import Logo from "../../assets/Logo/slice-and-sizzle-logo.png";
 function App() {
   return (
   
-    <div className="w-screen h-screen text-white" style={{
+    <div className="w-screen h-screen text-white" id="Hero"style={{
       background: `url(${pizzaslices}) center/cover no-repeat`, // Set background image
     }} >
       <div class="container mx-auto flex px-5 py-5 items-center justify-center flex-col">
