@@ -13,12 +13,7 @@ function SuperSellers() {
   ];
 
   return (
-<<<<<<< HEAD
-    <>
-      <h1 id="Supersellers">Supersellers</h1>
-    </>
-=======
-
+<div id="Supersellers">
     <div className="super-sellers">
       <h2>Super Sellers</h2>
       <div>
@@ -32,8 +27,8 @@ function SuperSellers() {
         ))}
       </div>
     </div>
+    </div>
 
->>>>>>> 10ac181d31899ca3fdeb9f8ff982bae37bfdd6ba
   );
 };
 

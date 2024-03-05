@@ -10,12 +10,7 @@ const Feedbacks = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <>
-      <h1 id="Feedback">Feedbacks</h1>
-    </>
-=======
-
+<div id="Feedback">
     <div className="feedbacks-container">
       <h2>Customer Feedbacks</h2>
       <ul className="feedbacks-list">
@@ -27,8 +22,8 @@ const Feedbacks = () => {
         ))}
       </ul>
     </div>
+    </div>
 
->>>>>>> 10ac181d31899ca3fdeb9f8ff982bae37bfdd6ba
   );
 };
 
