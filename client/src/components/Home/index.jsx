@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import NavBar from '../NavBar';
+import NavBar from '../Navbar';
 import Hero from '../Hero';
 import Supersellers from '../Supersellers';
 import Menu from '../Menu';

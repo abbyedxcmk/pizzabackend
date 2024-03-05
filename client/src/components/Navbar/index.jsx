@@ -1,5 +1,8 @@
 import React from 'react';
-import '../NavBar/index.css';
+
+import '../Navbar/index.css';
+
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,7 +11,8 @@ import { Link } from "react-router-dom";
 
 
 
-function NavBar() {
+
+function NavBar(){
   return (
     
     <Navbar expand="lg" className="bg-body-tertiary py-3">
@@ -27,6 +31,7 @@ function NavBar() {
     </Navbar>
   
   );
-}
+};
 
 export default NavBar;
+
