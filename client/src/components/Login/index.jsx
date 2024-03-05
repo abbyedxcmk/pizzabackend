@@ -1,4 +1,5 @@
-import NavBar from "../NavBar";
+import NavBar from "../Navbar";
+//import NavBar from "../../NavBar";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
 import Container from "react-bootstrap/esm/Container";
@@ -43,6 +44,7 @@ const Login = () => {
             <Form.Label>Email</Form.Label>
             <Form.Control
               type="email"
+              
               placeholder="Enter Email"
               name="email"
               onChange={handleInputChange}
