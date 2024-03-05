@@ -1,5 +1,5 @@
 import React from 'react';
-import '../NavBar/index.css';
+import './index.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,7 +9,7 @@ import menu from "../Menu"
 
 
 
-function Navbar(){
+function NavBar(){
   return (
     
     <Navbar expand="lg" className="bg-body-tertiary bg-danger">
@@ -30,5 +30,5 @@ function Navbar(){
   );
 };
 
-export default Navbar;
+export default NavBar;
 
