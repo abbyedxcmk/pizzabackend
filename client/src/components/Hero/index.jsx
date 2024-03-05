@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Hero/index.css';
-import pizzaslices from "../../assets/Heroimage/pizza-hero-2.jpeg";
+import pizzaslices from "../../assets/Heroimage/pizza-hero-3.jpeg";
 import logo from "../../assets/Logo/OP-1-removebg-preview.png";
 
 function App() {
