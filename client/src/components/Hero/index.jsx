@@ -1,6 +1,7 @@
 import React from 'react';
+import '../Hero/index.css';
 import pizzaslices from "../../assets/Heroimage/pizza-slices.jpg";
-import logo from "../../assets/Logo/OP-1-removebg-preview.png"
+import logo from "../../assets/Logo/OP-1-removebg-preview.png";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           </img>
           <div className="flex justify-center mx-auto">
             <button
-              className="hover:underline bg-white text-gray-800 font-bold rounded-full  py-4 px-8">
+              className="hover:underline bg-danger text-white font-bold rounded-full  py-4 px-8">
               See our full menu
             </button>
           </div>
