@@ -57,6 +57,6 @@ function Feedbacks() {
       </div>
     </div>
   );
-}
+};
 
 export default Feedbacks;
