@@ -1,15 +1,3 @@
-// import { useState } from 'react'
-// import Navbar from './components/NavBar';
-// import Hero from './components/Hero';
-// import Supersellers from './components/Supersellers';
-// import Menu from './components/Menu';
-// import Order from './components/Order';
-// import Checkout from './components/Checkout';
-// import Feedbacks from './components/Feedbacks';
-// import Contact from './components/Contact';
-// import Footer from './components/Footer';
-// import CreditCard from './components/CreditCard';
-
 import Register from "./components/Register";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
