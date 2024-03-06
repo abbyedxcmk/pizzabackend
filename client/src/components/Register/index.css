@@ -1,9 +1,12 @@
 .registerForm { 
     width:40%;
-
     .logo {
-        width:190px;
-        height: 180px;
+        width:130px;
+        height: 120px;
+    }
+    a {
+        text-decoration: none;
+        color: #E7311D;
     }
 }
 
@@ -11,7 +14,11 @@
     text-align: start;
 
     &:hover {
-        filter: brightness(80%);
+        filter:brightness(80%);
+    }
+    svg {
+        margin: 0;
+        top: 0;
     }
 }
 
@@ -20,3 +27,10 @@
     object-fit:cover;
     /*height: 45em;*/
 }
+
+.bgimagecontainer {
+    background-image: url(../../assets/Heroimage/pizza-hero-2.jpeg);
+    height: 100vh;
+    object-fit: cover;
+}
+

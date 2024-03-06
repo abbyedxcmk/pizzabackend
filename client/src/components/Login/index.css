@@ -3,3 +3,9 @@
         text-decoration: none;
     }
 }
+
+.bgimagecontainer {
+        background-image: url(../../assets/Heroimage/pizza-hero-2.jpeg);
+        height: 100vh;
+        object-fit: cover;
+}

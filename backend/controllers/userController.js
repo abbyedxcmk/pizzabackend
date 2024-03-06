@@ -32,7 +32,7 @@ const Login = async (req, res, next) => {
     } else {
       generateToken(res, data[0].id);
     }
-    res.status(200).json({ message: "User logged in!" });
+    res.status(200).json({ message: "User logged in!", data: data });
   } catch (error) {
     next(error);
   }
