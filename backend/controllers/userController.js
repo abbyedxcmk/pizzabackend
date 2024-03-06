@@ -23,8 +23,10 @@ const Login = async (req, res, next) => {
       .select("*")
       .eq("email", email);
 
+    const pass = await bcrypt.compare(password, data[0].password);
+
     //check username exists and password is correct
-    if (data.length != 1 || !bcrypt.compare(password, data[0].password)) {
+    if (data.length != 1 || !pass) {
       res.status(403);
       throw new Error("Invalid username or password");
     } else {

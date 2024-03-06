@@ -7,6 +7,8 @@ import axios from "axios";
 import "../../index.css";
 import "./index.css";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [users, setUsers] = useState({
@@ -28,11 +30,12 @@ const Login = () => {
     axios
       .post("/api/users/login", users)
       .then((response) => console.log(response, users))
-      .catch((err) => console.log(err));
+      .catch((err) => toast.error(err.response.data.message));
   };
   return (
     <>
       <NavBar></NavBar>
+      <ToastContainer></ToastContainer>
       <Container className="bg-color-4 rounded w-25 mt-5 p-5 shadow loginContainer">
         <h1 className="text-center pb-3 mb-3">Login</h1>
         <Form onSubmit={handleSubmit}>
@@ -40,6 +43,7 @@ const Login = () => {
             <Form.Label>Email</Form.Label>
             <Form.Control
               type="email"
+              
               placeholder="Enter Email"
               name="email"
               onChange={handleInputChange}

@@ -4,7 +4,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+
 import NavBar from "../NavBar";
+
 import { useState } from "react";
 import axios from "axios";
 import "../../index.css";
@@ -14,6 +16,8 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "react-bootstrap/Image";
 import registerImg from "../../assets/registerImg.png";
 import logo from "../../assets/OP-1.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const [users, setUsers] = useState({
@@ -35,11 +39,12 @@ const Register = () => {
     axios
       .post("/api/users", users)
       .then((response) => console.log(response, users))
-      .catch((err) => console.log(err));
+      .catch((err) => toast.error(err.response.data.message));
   };
   return (
     <>
       <NavBar></NavBar>
+      <ToastContainer />
       <Container className="w-75 my-5 bg-secondary rounded bg-color-4 shadow position-relative d-flex justify-content-between px-0">
         <Form className="p-4 rounded registerForm" onSubmit={handleSubmit}>
           <Image src={logo} className="logo"></Image>

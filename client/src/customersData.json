@@ -10,17 +10,5 @@
     "ccNumber": "1234 5678 9012 3456",
     "ccExpiration": "12/24",
     "ccCode": "123"
-  },
-  {
-    "id": 2,
-    "firstName": "Bruno",
-    "lastName": "Silva",
-    "email": "bruno@silva.com",
-    "address": "00 Main Street",
-    "cityName": "London",
-    "postcode": "HL10 1HL",
-    "ccNumber": "1542 1512 3587 8425",
-    "ccExpiration": "24/24",
-    "ccCode": "123"
   }
 ]
