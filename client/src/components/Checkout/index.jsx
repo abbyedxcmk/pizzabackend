@@ -16,6 +16,8 @@ function Checkout({ subtotal, total }) {
     ccCode: ''
   });
 
+  const [showModal, setShowModal] = useState(false);
+
   const handleInputChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
@@ -39,7 +41,7 @@ function Checkout({ subtotal, total }) {
 
     // If data matches, display an alert
     if (matchingData) {
-      alert('The data is correct!');
+      setShowModal(true);
     } else {
       alert('The data is incorrect.');
     }
@@ -77,34 +79,34 @@ function Checkout({ subtotal, total }) {
                 <h3 className='fw-bold mb-3'>BILLING ADDRESS</h3>
                 <div className='d-flex gap-5 justify-content-between'>
                   <div className='col d-flex flex-column'>
-                    <label for="firstName" className="form-label fs-5 mt-3 color-1">First Name</label>
-                    <input type="text" className="border border-3 border-dark form-control" id="firstName" value={formData.firstName} onChange={handleInputChange} placeholder="" required></input>
+                    <label htmlFor="firstName" className="form-label fs-5 mt-3 color-1">First Name</label>
+                    <input type="text" className="border border-3 border-dark form-control" id="firstName" value={formData.firstName} onChange={handleInputChange} placeholder="React" required></input>
                   </div>
                   <div className='col d-flex flex-column'>
-                    <label for="lastName" className="form-label fs-5 mt-3 color-1">Last Name</label>
-                    <input type="text" className="border border-3 border-dark form-control" id="lastName" value={formData.lastName} onChange={handleInputChange} placeholder="" required></input>
+                    <label htmlFor="lastName" className="form-label fs-5 mt-3 color-1">Last Name</label>
+                    <input type="text" className="border border-3 border-dark form-control" id="lastName" value={formData.lastName} onChange={handleInputChange} placeholder="JS" required></input>
                   </div>
                 </div>
                 
                 <div className='d-flex gap-5 my-2 justify-content-between'>
                   <div className='col d-flex flex-column'>
-                    <label for="email" className="form-label fs-5 mt-3 color-1">Email</label>
-                    <input type="email" className="border border-3 border-dark form-control" id="email" value={formData.email} onChange={handleInputChange} placeholder="you@example.com" required></input>
+                    <label htmlFor="email" className="form-label fs-5 mt-3 color-1">Email</label>
+                    <input type="email" className="border border-3 border-dark form-control" id="email" value={formData.email} onChange={handleInputChange} placeholder="react@js.com" required></input>
                   </div>
                   <div className='col d-flex flex-column'>
-                    <label for="address" className="form-label fs-5 mt-3 color-1">Address</label>
-                    <input type="text" className="border border-3 border-dark form-control" id="address" value={formData.address} onChange={handleInputChange} placeholder="2024 Parliament Square" required></input>
+                    <label htmlFor="address" className="form-label fs-5 mt-3 color-1">Address</label>
+                    <input type="text" className="border border-3 border-dark form-control" id="address" value={formData.address} onChange={handleInputChange} placeholder="00 Node" required></input>
                   </div>
                 </div>
 
                 <div className='d-flex gap-5 my-2 justify-content-between'>
                   <div className='col d-flex flex-column'>
-                    <label for="cityName" className="form-label fs-5 mt-3 color-1">City Name</label>
+                    <label htmlFor="cityName" className="form-label fs-5 mt-3 color-1">City Name</label>
                     <input type="text" className="border border-3 border-dark form-control" id="cityName" value={formData.cityName} onChange={handleInputChange} placeholder="London" required></input>
                   </div>
                   <div className='col d-flex flex-column'>
-                    <label for="postcode" className="form-label fs-5 mt-3 color-1">Postcode</label>
-                    <input type="text" className="border border-3 border-dark form-control" id="postcode" value={formData.postcode} onChange={handleInputChange} placeholder="" required></input>
+                    <label htmlFor="postcode" className="form-label fs-5 mt-3 color-1">Postcode</label>
+                    <input type="text" className="border border-3 border-dark form-control" id="postcode" value={formData.postcode} onChange={handleInputChange} placeholder="JS00 0JS" required></input>
                   </div>
                 </div>
 
@@ -117,26 +119,46 @@ function Checkout({ subtotal, total }) {
                 <h3 className='fw-bold mb-3 color-2'>PAYMENT</h3>
                 <div className='d-flex gap-3 justify-content-between'>
                   <div className='col-6 d-flex flex-column'>
-                    <label for="ccNumber" className="form-label fs-5 mt-3 color-1">Credit Card Number</label>
-                    <input type="text" className="border border-3 border-dark form-control" id="ccNumber" value={formData.ccNumber} onChange={handleInputChange} placeholder="0120 0230 0340 0540" required></input>
+                    <label htmlFor="ccNumber" className="form-label fs-5 mt-3 color-1">Credit Card Number</label>
+                    <input type="text" className="border border-3 border-dark form-control" id="ccNumber" value={formData.ccNumber} onChange={handleInputChange} placeholder="1234 5678 9012 3456" required></input>
                   </div>
                   <div className='col d-flex flex-column'>
-                    <label for="ccExpiration" className="form-label fs-5 mt-3 color-1">Expiration</label>
-                    <input type="text" className="border border-3 border-dark form-control" id="ccExpiration" value={formData.ccExpiration} onChange={handleInputChange} placeholder="2030" required></input>
+                    <label htmlFor="ccExpiration" className="form-label fs-5 mt-3 color-1">Expiration</label>
+                    <input type="text" className="border border-3 border-dark form-control" id="ccExpiration" value={formData.ccExpiration} onChange={handleInputChange} placeholder="12/24" required></input>
                   </div>
                   <div className='col d-flex flex-column'>
-                    <label for="ccCode" className="form-label fs-5 mt-3 color-1">CCV</label>
+                    <label htmlFor="ccCode" className="form-label fs-5 mt-3 color-1">CCV</label>
                     <input type="text" className="border border-3 border-dark form-control" id="ccCode" value={formData.ccCode} onChange={handleInputChange} placeholder="123" required></input>
                   </div>
                 </div>
                 <hr className="my-4"></hr>
-                <button id='payNow' type="submit" className="w-100 p-3 mb-4 btn btn-lg btn-paynow fw-bold" >PAY NOW</button>
+                <button id='payNow' type="submit" className="w-100 p-3 mb-4 btn btn-lg btn-paynow fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">PAY NOW</button>
               </form>
             </div>
           </div>
         </div>
-        
       </div>
+
+      {showModal &&
+        <div className="modal fade show bg-color-2" style={{ display: 'block' }} tabIndex="-1">
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5">ORDER CONFIRMED!</h1>
+                <button type="button" className="btn-close" onClick={() => setShowModal(false)} aria-label="Close"></button>
+              </div>
+              <div className="modal-body">
+                <p>Thank you for your order!</p>
+                <h3>Your pizza is on the way. 😋</h3>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={() => setShowModal(false)}>Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+
     </div>
   );
 };

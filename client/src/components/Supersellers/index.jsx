@@ -8,7 +8,7 @@ import './index.css';
 
 function GroupExample() {
   return (
-    
+
     <CardGroup id="cards">
       <Card id="card1">
         <Card.Img variant="top" src={superseller1} />
@@ -41,6 +41,7 @@ function GroupExample() {
         
       </Card>
     </CardGroup>
+
   );
 }
 

@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "firstName": "Home",
-    "lastName": "Less",
-    "email": "home@less.com",
-    "address": "00 Overpass",
+    "firstName": "React",
+    "lastName": "JS",
+    "email": "react@js.com",
+    "address": "00 Node",
     "cityName": "London",
-    "postcode": "HL00 0HL",
+    "postcode": "JS00 0JS",
     "ccNumber": "1234 5678 9012 3456",
     "ccExpiration": "12/24",
     "ccCode": "123"
