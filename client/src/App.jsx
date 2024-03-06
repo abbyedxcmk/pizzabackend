@@ -1,27 +1,23 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Supersellers from './components/Supersellers';
-import Menu from './components/Menu';
-import OrderCheckout from './components/OrderCheckout';
-import Feedbacks from './components/Feedbacks';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
-import './App.css'
+import Register from "./components/Register";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import "./App.css";
+import Supersellers from "./components/Supersellers";
 
 function App() {
+ 
+  
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Supersellers />
-      <Menu />
-      <OrderCheckout />
-      <Feedbacks />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/register" element={<Register />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        {/* <Route path="/Supersellers" element={<Supersellers />}></Route> */}
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
