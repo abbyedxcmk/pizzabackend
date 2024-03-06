@@ -55,6 +55,8 @@ function Feedbacks() {
         {showForm && <FeedbackForm onAddFeedback={handleAddFeedback} />}
       </div>
     </div>
+    </div>
+
   );
 };
 
