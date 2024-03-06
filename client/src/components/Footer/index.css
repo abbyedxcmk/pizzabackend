@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+   
   }
   
   .social-icons a {
@@ -24,9 +25,21 @@
     height: 30px;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out;
+    align-items: center;
   }
   
   .social-icons img:hover {
     transform: scale(1.2);
   }
+
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
+.social-icons-container a {
+  margin: 0 10px; 
+}
+
   

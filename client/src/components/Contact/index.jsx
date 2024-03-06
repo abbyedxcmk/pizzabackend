@@ -1,76 +1,76 @@
-import React, {useState} from "react";
-// import emailjs from "@emailjs/browser";
 
-function Contact() {
-   // State variables for form inputs
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
-  // Function to handle form submission
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import './index.css'
+
+const Contact = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Emailjs service ID, template ID and Public Key
-    const serviceId = service_mu1nk0l;
-    const templateId = template_867on8m;
-    const publickey = aq2UxuasCWJTe-YuP;
+    // Replace these values with your own Email.js template and user ID
+    const serviceId = 'service_ep01xo7';
+    const templateId = 'template_gdeefbr';
+    const userId = 'aq2UxuasCWJTe-YuP'; 
 
-    //New object that contains dynamic template params
     const templateParams = {
       from_name: name,
       from_email: email,
-      to_name: "Rashid",
       message: message,
     };
 
-    // Sending the email using emailjs
-    emailjs
-      .send(serviceId, templateId, templateParams, publickey)
-      .then((result) => {
-        console.log("Email sent successfully!", result);
-        setName("");
-        setEmail("");
-        setMessage("");
+    emailjs.send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        // add a success message 
+      setName("");
+      setEmail("");
+      setMessage("");
       })
       .catch((error) => {
-        console.error("Error sending email:", error);
+        console.error('Error sending email:', error);
+        //error message
       });
   };
 
   return (
-    <>
-      <div className="contact my-5">
-        <h1>Contact</h1>
-        <p>Have Questions? Reach out to us!</p>
+    <div>
+      <h2>Contact Us</h2>
+      <form onSubmit={handleSubmit} className='contactForm'>
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
 
-        <form onSubmit={handleSubmit} className="emailForm">
-          <input
-            type="text"
-            placeholder="Your Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <textarea
-            cols="20"
-            rows="4"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          ></textarea>
+        <label htmlFor="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
 
-          <button className="bg-color-2" type="submit">Send Message</button>
-        </form>
-      </div>
-    </>
+        <label htmlFor="message">Message:</label>
+        <textarea
+          id="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   );
-}
+};
 
 export default Contact;
-
-

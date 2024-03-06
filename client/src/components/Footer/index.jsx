@@ -7,7 +7,7 @@ import {faFacebook, faTwitter, faInstagram} from  "@fortawesome/free-brands-svg-
 function Footer() {
   return (
     <footer className="footer bg-color-1">
-      <div className="social-icons">
+      <div className="social-icons-container">
         <a href="https://www.facebook.com/" target="_blank">
         <FontAwesomeIcon icon={faFacebook} />
         </a>
