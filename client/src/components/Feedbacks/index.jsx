@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Elon from '../../assets/reviews/elon-profile.webp';
 import feedbacksData from '../../feedbacksData.json';
 import FeedbackForm from '../FeedbackForm';
 
@@ -37,21 +36,21 @@ function Feedbacks() {
   };
 
   return (
-<div id="Feedback">
-    <div className="feedbacks-container">
-      <h2>Customer Feedbacks</h2>
-      <ul className="feedbacks-list">
-        {feedbacks.map((feedback) => (
-          <li key={feedback.id} className="feedback-item">
-            <p className="user">{feedback.user}</p>
-            <p className="comment">{feedback.comment}</p>
-          </li>
-          </ul>
+    <div className='container-fluid p-5 bg-color-2'>
+      <div className='row mb-4 ps-md-5 ps-lg-0'>
+        <h2 className='display-5 color-4 fw-bold'>Customers Feedbacks</h2>
+      </div>
+      <div className='row gap-5 px-md-5 px-lg-0'>
+        {combinedFeedbacks.map((feedback) => (
+          <div className="col-12 mx-auto col-lg-5 d-flex align-items-center bg-color-4 rounded-3 p-3" key={feedback.id}>
+            <img src={feedback.profileImage} className='rounded-circle me-3 border border-5 border-light img-fluid' width={135} height={135} alt="" />
+            <p className='fs-5 py-0'>{feedback.message}</p>
+          </div>
         ))}
       </div>
       <div className='row gap-5 px-md-5 px-lg-0 mt-5'>
         {!showForm && ( // Render the button only if the form is not visible
-          <button className="col-2 btn fs-5 p-3 btn-feedback" onClick={toggleFormVisibility}>LEAVE US YOUR FEEDBACK</button>
+          <button className="col-12 col-md-6 col-lg-4 col-xl-3 mx-auto btn fs-5 p-3 btn-feedback" onClick={toggleFormVisibility}>LEAVE US YOUR FEEDBACK</button>
         )}
         {showForm && <FeedbackForm onAddFeedback={handleAddFeedback} />}
       </div>
