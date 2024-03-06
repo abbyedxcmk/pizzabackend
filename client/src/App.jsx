@@ -6,8 +6,6 @@ import "./App.css";
 import Supersellers from "./components/Supersellers";
 
 function App() {
- 
-  
   return (
     <>
       <Routes>
