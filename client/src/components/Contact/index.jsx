@@ -4,7 +4,7 @@ import './index.css'
 function Contact() {
   return (
     <>
-      <div className="contact">
+      <div className="contact my-5">
         <h1>Contact</h1>
         <p>Have Questions? Reach out to us!</p>
 
@@ -22,7 +22,7 @@ function Contact() {
             required
           ></textarea>
 
-          <button type="submit">Send Message</button>
+          <button className="bg-color-2" type="submit">Send Message</button>
         </form>
       </div>
     </>

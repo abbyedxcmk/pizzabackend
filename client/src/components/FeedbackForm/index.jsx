@@ -7,6 +7,8 @@ function FeedbackForm({ onAddFeedback }) {
     message: '',
   });
 
+  const [formVisible, setFormVisible] = useState(true); // New state to control form visibility
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -14,19 +16,21 @@ function FeedbackForm({ onAddFeedback }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Gere um ID único para o novo feedback
+    // Generate a unique ID for new feedback
     const id = new Date().getTime();
     const newFeedback = { id, ...formData };
-    // Chame a função de retorno de chamada para adicionar o novo feedback
+    // Call the callback function to add the new feedback
     onAddFeedback(newFeedback);
-    // Limpe os campos do formulário após o envio
+    // Clear form fields after submission
     setFormData({ name: '', profileImage: '', message: '' });
-    // Armazene o feedback no localStorage
+    // Store feedback in localStorage
     localStorage.setItem(`feedback_${id}`, JSON.stringify(newFeedback));
+    // Hide the form after submission
+    setFormVisible(false); 
   };
 
   return (
-    <div className='col-4 bg-color-4 p-5 rounded-3'>
+    <div className={`col-12 col-lg-5 bg-color-4 mx-auto p-5 rounded-3 ${formVisible ? '' : 'd-none'}`}>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label fs-5">First Name</label>
