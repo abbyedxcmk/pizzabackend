@@ -6,7 +6,7 @@ import {faFacebook, faTwitter, faInstagram} from  "@fortawesome/free-brands-svg-
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer bg-color-1">
       <div className="social-icons">
         <a href="https://www.facebook.com/" target="_blank">
         <FontAwesomeIcon icon={faFacebook} />
@@ -18,7 +18,7 @@ function Footer() {
         <FontAwesomeIcon icon={faInstagram} />
         </a>
       </div>
-      <p className='footer'>&copy; 2024 Food Delivery Website. All rights reserved.</p>
+      <p className='footer bg-color-1'>&copy; 2024 Food Delivery Website. All rights reserved.</p>
     </footer>
   );
 }
