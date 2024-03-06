@@ -31,7 +31,6 @@ const Register = () => {
       ...users,
       [name]: value,
     });
-    console.log(users);
   };
 
   const handleSubmit = (e) => {
@@ -43,69 +42,71 @@ const Register = () => {
   };
   return (
     <>
-      <NavBar></NavBar>
-      <ToastContainer />
-      <Container className="w-75 my-5 bg-secondary rounded bg-color-4 shadow position-relative d-flex justify-content-between px-0">
-        <Form className="p-4 rounded registerForm" onSubmit={handleSubmit}>
-          <Image src={logo} className="logo"></Image>
-          <Form.Group controlId="formEmail" className="mb-3">
-            <h1 className="mb-5">Create an Account</h1>
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              type="email"
-              name="email"
-              placeholder="Enter Email"
-              onChange={handleInputChange}
-            ></Form.Control>
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
-          <Form.Group controlId="formPassword" className="mb-3">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              name="password"
-              onChange={handleInputChange}
-            ></Form.Control>
-          </Form.Group>
-          <Form.Group controlId="formConfirmPassword" className="mb-3">
-            <Form.Label>Confirm Password</Form.Label>
-            <Form.Control
-              type="password"
-              name="confirm-password"
-              onChange={handleInputChange}
-            ></Form.Control>
-          </Form.Group>
-          <Button
-            variant="primary"
-            type="submit"
-            className="w-100 mb-5 bg-color-2 registerBtn"
-          >
-            Create Account
-            <FontAwesomeIcon icon={faArrowRight} className="float-end" />
-          </Button>
-          <Row>
-            <Col className="col-8">
-              <p>Already have an account?</p>
-            </Col>
-            <Col className="col-4">
-              <a as={Link} to="/login">
-                Log in
-              </a>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="col-8">
-              <p>Forgot Password?</p>
-            </Col>
-            <Col className="col-4">
-              <a>Get Help</a>
-            </Col>
-          </Row>
-        </Form>
-        <Image src={registerImg} className="registerImg rounded"></Image>
-      </Container>
+      <div className="bgimagecontainer position-absolute">
+        <NavBar></NavBar>
+        <ToastContainer />
+        <Container className="w-xl-75 w-sm-100 h-sm-100 bg-secondary rounded bg-color-4 shadow d-lg-flex justify-content-between-lg px-0 vh-lg-75 register-container">
+          <Form className="p-4 rounded registerForm" onSubmit={handleSubmit}>
+            <Image src={logo} className="logo"></Image>
+            <Form.Group controlId="formEmail" className="mb-3">
+              <h1 className="mb-5">Create an Account</h1>
+              <Form.Label>Email</Form.Label>
+              <Form.Control
+                type="email"
+                name="email"
+                placeholder="Enter Email"
+                onChange={handleInputChange}
+              ></Form.Control>
+              <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+              </Form.Text>
+            </Form.Group>
+            <Form.Group controlId="formPassword" className="mb-3">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                name="password"
+                onChange={handleInputChange}
+              ></Form.Control>
+            </Form.Group>
+            <Form.Group controlId="formConfirmPassword" className="mb-3">
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control
+                type="password"
+                name="confirm-password"
+                onChange={handleInputChange}
+              ></Form.Control>
+            </Form.Group>
+            <Button
+              variant="primary"
+              type="submit"
+              className="w-100 mb-5 bg-color-2 registerBtn"
+            >
+              Create Account
+              <FontAwesomeIcon icon={faArrowRight} className="float-end mt-1" />
+            </Button>
+            <Row>
+              <Col className="col-8">
+                <p>Already have an account?</p>
+              </Col>
+              <Col className="col-4">
+                <Link to="/login" className="float-end">
+                  Log in
+                </Link>
+              </Col>
+            </Row>
+            <Row>
+              <Col className="col-8">
+                <p>Forgot Password?</p>
+              </Col>
+              <Col className="col-4">
+                <Link className="float-end">Get Help</Link>
+              </Col>
+            </Row>
+          </Form>
+          <Image src={registerImg} className="registerImg rounded"></Image>
+        </Container>
+      </div>
     </>
   );
 };
