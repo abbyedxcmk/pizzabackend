@@ -44,13 +44,11 @@ function Menu({ onAddToOrder }) {
           <div className="col py-3" key={pizza.id}>
             <div className="card rounded-3 border border-3 border-dark">
               <div className="card-header border-bottom border-3 border-dark p-4">
-
-                <img src={pizza.imageUrl} className='img-fluid' alt={pizza.productName} /> {/* Add alt text */}
+                <img src={pizza.imageUrl} className='img-fluid mx-auto d-block mb-3' alt={pizza.productName} /> {/* Add alt text */}
                 <button
                   type="button"
                   className="w-100 p-3 btn btn-lg btn-outline-dark fw-bold"
                   onClick={() => handleQuickAdd(pizza)} // Pass the selected pizza to handleQuickAdd
-
                 >
                   QUICK ADD
                 </button>

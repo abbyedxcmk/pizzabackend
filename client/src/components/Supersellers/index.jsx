@@ -27,8 +27,7 @@ function SuperSellers() {
         ))}
       </div>
     </div>
-    </div>
-
+  </div>
   );
 };
 
