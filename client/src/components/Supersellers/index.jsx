@@ -13,10 +13,9 @@ function GroupExample() {
       <Card id="card1">
         <Card.Img variant="top" src={superseller1} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
+          <Card.Title id="cardtitle">Superseller 1</Card.Title>
+          <Card.Text id="cardtext">
+            Info
           </Card.Text>
         </Card.Body>
       </Card>
@@ -24,10 +23,9 @@ function GroupExample() {
       <Card id="card2">
         <Card.Img variant="top" src={superseller2} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.{' '}
+          <Card.Title id="cardtitle">Superseller 2</Card.Title>
+          <Card.Text id="cardtext">
+            Info
           </Card.Text>
         </Card.Body>
       </Card>
@@ -35,11 +33,9 @@ function GroupExample() {
       <Card id="card3">
         <Card.Img variant="top" src={superseller3} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
+          <Card.Title id="cardtitle">Superseller 3</Card.Title>
+          <Card.Text id="cardtext"> 
+            Info
           </Card.Text>
         </Card.Body>
         
