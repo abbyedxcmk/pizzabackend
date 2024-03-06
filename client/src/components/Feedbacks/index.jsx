@@ -1,13 +1,40 @@
-// Feedbacks.js
-import React from 'react';
-import './index.css';
+import React, { useEffect, useState } from 'react';
+import Elon from '../../assets/reviews/elon-profile.webp';
+import feedbacksData from '../../feedbacksData.json';
+import FeedbackForm from '../FeedbackForm';
 
-const Feedbacks = () => {
-  const feedbacks = [
-    { id: 1, user: 'John Doe', comment: 'Great food and fast delivery!' },
-    { id: 2, user: 'Jane Smith', comment: 'The packaging was excellent.' },
-    { id: 3, user: 'Bob Johnson', comment: 'Variety of options to choose from.' },
-  ];
+function Feedbacks() {
+  const [combinedFeedbacks, setCombinedFeedbacks] = useState([]);
+  const [showForm, setShowForm] = useState(false); // State to control form display
+
+  // Function to combine feedbacks from localStorage with feedbacksData
+  const combineFeedbacks = () => {
+    const localStorageFeedbacks = Object.values(localStorage).filter(item => item.startsWith('feedback_')).map(item => JSON.parse(item));
+    const allFeedbacks = [...feedbacksData, ...localStorageFeedbacks];
+    // Remove feedbacks duplicados com base no ID
+    const uniqueFeedbacks = allFeedbacks.filter((feedback, index, self) =>
+      index === self.findIndex((t) => (
+        t.id === feedback.id
+      ))
+    );
+    setCombinedFeedbacks(uniqueFeedbacks);
+  };
+
+  // Updates the combined list of feedbacks every time the page is loaded
+  useEffect(() => {
+    combineFeedbacks();
+  }, []);
+
+  const handleAddFeedback = (newFeedback) => {
+    // Logic for adding new feedback to your feedback list
+    console.log('Novo feedback:', newFeedback);
+    // Adds the new feedback to the combined feedback list
+    setCombinedFeedbacks(prevFeedbacks => [...prevFeedbacks, newFeedback]);
+  };
+
+  const toggleFormVisibility = () => {
+    setShowForm(!showForm); // Toggle between showing and hiding the form
+  };
 
   return (
 <div id="Feedback">
@@ -19,8 +46,15 @@ const Feedbacks = () => {
             <p className="user">{feedback.user}</p>
             <p className="comment">{feedback.comment}</p>
           </li>
+          </ul>
         ))}
-      </ul>
+      </div>
+      <div className='row gap-5 px-md-5 px-lg-0 mt-5'>
+        {!showForm && ( // Render the button only if the form is not visible
+          <button className="col-2 btn fs-5 p-3 btn-feedback" onClick={toggleFormVisibility}>LEAVE US YOUR FEEDBACK</button>
+        )}
+        {showForm && <FeedbackForm onAddFeedback={handleAddFeedback} />}
+      </div>
     </div>
     </div>
 
