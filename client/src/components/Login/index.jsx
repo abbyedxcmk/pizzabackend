@@ -24,7 +24,6 @@ const Login = () => {
       ...users,
       [name]: value,
     });
-    console.log(users);
   };
 
   const handleSubmit = (e) => {
@@ -40,10 +39,10 @@ const Login = () => {
   };
   return (
     <>
-      <div className="bgimagecontainer">
+      <div className="bgimagecontainer position-absolute">
         <NavBar></NavBar>
         <ToastContainer></ToastContainer>
-        <Container className="bg-color-4 rounded w-25 mt-5 p-5 shadow loginContainer">
+        <Container className="bg-color-4 rounded w-xxl-25 w-sm-100 md-w-25 sm-h-100 p-5 shadow loginContainer">
           <h1 className="text-center pb-3 mb-3">Login</h1>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formEmail" className="mb-3">

@@ -8,6 +8,13 @@ import menu from "../Menu";
 import { Link, useNavigate } from "react-router-dom";
 
 function NavBar() {
+  const handleClick = (e) => {
+    e.preventDefault();
+    axios
+      .post("/api/users/logout")
+      .then((response) => console.log(response))
+      .catch((err) => toast.error(err.response.data.message));
+  };
   return (
     <Navbar expand="lg" className="bg-body-tertiary bg-danger">
       <Container fluid>
@@ -29,6 +36,8 @@ function NavBar() {
             <Nav.Link href="#reviews" className="text-light">
               Customer Reviews
             </Nav.Link>
+          </Nav>
+          <Nav className="ms-auto">
             {"userID" in localStorage ? (
               <>
                 {" "}
@@ -39,6 +48,7 @@ function NavBar() {
                   onClick={() => {
                     localStorage.clear();
                     useNavigate("/");
+                    handleClick;
                   }}
                 >
                   Logout

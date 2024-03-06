@@ -4,7 +4,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+
 import NavBar from "../NavBar";
+
 import { useState } from "react";
 import axios from "axios";
 import "../../index.css";
@@ -29,7 +31,6 @@ const Register = () => {
       ...users,
       [name]: value,
     });
-    console.log(users);
   };
 
   const handleSubmit = (e) => {
@@ -41,10 +42,10 @@ const Register = () => {
   };
   return (
     <>
-      <div className="bgimagecontainer">
+      <div className="bgimagecontainer position-absolute">
         <NavBar></NavBar>
         <ToastContainer />
-        <Container className="w-75 mt-3 bg-secondary rounded bg-color-4 shadow position-relative d-flex justify-content-between px-0 vh-75">
+        <Container className="w-xl-75 w-sm-100 h-sm-100 bg-secondary rounded bg-color-4 shadow d-lg-flex justify-content-between-lg px-0 vh-lg-75 register-container">
           <Form className="p-4 rounded registerForm" onSubmit={handleSubmit}>
             <Image src={logo} className="logo"></Image>
             <Form.Group controlId="formEmail" className="mb-3">
@@ -82,14 +83,16 @@ const Register = () => {
               className="w-100 mb-5 bg-color-2 registerBtn"
             >
               Create Account
-              <FontAwesomeIcon icon={faArrowRight} className="float-end" />
+              <FontAwesomeIcon icon={faArrowRight} className="float-end mt-1" />
             </Button>
             <Row>
               <Col className="col-8">
                 <p>Already have an account?</p>
               </Col>
               <Col className="col-4">
-                <Link to="/login">Log in</Link>
+                <Link to="/login" className="float-end">
+                  Log in
+                </Link>
               </Col>
             </Row>
             <Row>
@@ -97,7 +100,7 @@ const Register = () => {
                 <p>Forgot Password?</p>
               </Col>
               <Col className="col-4">
-                <Link>Get Help</Link>
+                <Link className="float-end">Get Help</Link>
               </Col>
             </Row>
           </Form>
