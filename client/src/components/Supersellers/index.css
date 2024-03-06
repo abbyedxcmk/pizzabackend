@@ -1,27 +1,5 @@
-/* index.css
- .super-sellers {
-    margin: 20px;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .card {
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card img {
-    max-height: 200px;
-    object-fit: cover;
-  }
-  
-  .card-title {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  You can add more styles as needed */
+.cards {
+    max-width:50%;
+    height:auto;
+}
   
