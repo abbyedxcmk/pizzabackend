@@ -55,7 +55,7 @@ const Home = () => {
         <Order orderItems={orderItems} onUpdateQuantity={updateQuantity}></Order>
         <Checkout subtotal={calculateTotal().subtotal} total={calculateTotal().total}></Checkout>
       </div>
-      <Feedbacks></Feedbacks>
+      <Feedbacks></Feedbacks>/
       <Contact></Contact>
       <Footer></Footer>
       {/* <CreditCard></CreditCard> */}

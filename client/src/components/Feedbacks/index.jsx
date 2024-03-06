@@ -41,7 +41,7 @@ function Feedbacks() {
     <div className="feedbacks-container">
       <h2>Customer Feedbacks</h2>
       <ul className="feedbacks-list">
-        {feedbacks.map((feedback) => (
+        {combinedFeedbacks.map((feedback) => (
           <li key={feedback.id} className="feedback-item">
             <p className="user">{feedback.user}</p>
             <p className="comment">{feedback.comment}</p>
