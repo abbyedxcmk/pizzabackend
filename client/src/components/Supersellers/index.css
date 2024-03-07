@@ -1,72 +1,7 @@
-#cards {
-    display: flex;
-    justify-content: space-around; 
-  }
-  
-  #card1 .card-img-top,
-  #card2 .card-img-top,
-  #card3 .card-img-top {
-    max-width: 35%; 
-    height: auto;    
-    margin-top: 10%;
-    margin-bottom: 5%;
-    margin-left: 32%;
-  }
-
-#card1 {
-    background-color: #575244;
+.supersellers-h2 {
+  letter-spacing: 0.25rem;
 }
 
-#card2 {
-    background-color: #d2bf9d;
-}
-  
-#card3 {
-    background-color: #575244;
-}
-
-#supersellertitle {
-    color: white;
-    font-size: 50px;
-    margin-top: 5%;
-    margin-left: 5%;
-    text-align: left;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight:bold   
-}
-
-#cardtitle1 {
-    color: #d2bf9d;
-    font-size: 50px;
-    margin-bottom: 5%;
-    text-align: center;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight:bold
-}
-
-#cardtitle2 {
-    color: #575244;
-    font-size: 50px;
-    margin-top: 5%;
-    text-align: center;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight:bold
-}
-
-#cardtitle3 {
-    color: #d2bf9d;
-    font-size: 50px;
-    margin-bottom: 5%;
-    text-align: center;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight:bold
-}
-
-#cardtext {
-    color: white;
-    font-family: "IBM Plex Mono", monospace;
-    margin-left: 5%;
-    margin-top: 5%;
-    font-size: 130%;
-    text-align: center;
+.supersellers-height img {
+  max-height: 22.5rem;
 }
