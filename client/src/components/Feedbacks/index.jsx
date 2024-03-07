@@ -38,7 +38,7 @@ function Feedbacks() {
   return (
     <div className='container-fluid p-5 bg-color-2'>
       <div className='row mb-4 ps-md-5 ps-lg-0'>
-        <h2 className='display-5 color-4 fw-bold'>Customers Feedbacks</h2>
+        <h2 className='display-5 color-4 fw-bold'>Customers Feedback</h2>
       </div>
       <div className='row gap-5 px-md-5 px-lg-0'>
         {combinedFeedbacks.map((feedback) => (
