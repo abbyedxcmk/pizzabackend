@@ -11,9 +11,10 @@ function GroupExample() {
 
     <CardGroup id='Supersellers' className="cards">
       <Card id="card1">
+        {/* <h1 id="supersellertitle">Our Supersellers...</h1> */}
         <Card.Img variant="top" src={superseller1} />
         <Card.Body>
-          <Card.Title id="cardtitle">Margherita</Card.Title>
+          <Card.Title id="cardtitle1">Margherita</Card.Title>
           {/* <Card.Text id="cardtext">
             Info
           </Card.Text> */}
@@ -21,9 +22,9 @@ function GroupExample() {
       </Card>
       
       <Card id="card2">
+      <Card.Title id="cardtitle2">Fiorentina</Card.Title>
         <Card.Img variant="top" src={superseller2} />
         <Card.Body>
-          <Card.Title id="cardtitle">Fiorentina</Card.Title>
           {/* <Card.Text id="cardtext">
             Info
           </Card.Text> */}
@@ -33,7 +34,7 @@ function GroupExample() {
       <Card id="card3">
         <Card.Img variant="top" src={superseller3} />
         <Card.Body>
-          <Card.Title id="cardtitle">Diavola</Card.Title>
+          <Card.Title id="cardtitle3">Diavola</Card.Title>
           {/* <Card.Text id="cardtext"> 
             Info
           </Card.Text> */}

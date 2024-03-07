@@ -14,23 +14,52 @@
   }
 
 #card1 {
-    background-color: #34692B;
+    background-color: #575244;
 }
 
 #card2 {
-    background-color: #34692B;
+    background-color: #d2bf9d;
 }
   
 #card3 {
-    background-color: #34692B;
+    background-color: #575244;
 }
 
-#cardtitle {
+#supersellertitle {
     color: white;
+    font-size: 50px;
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: left;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight:bold   
+}
+
+#cardtitle1 {
+    color: #d2bf9d;
     font-size: 50px;
     margin-bottom: 5%;
     text-align: center;
     font-family: "IBM Plex Mono", monospace;
+    font-weight:bold
+}
+
+#cardtitle2 {
+    color: #575244;
+    font-size: 50px;
+    margin-top: 5%;
+    text-align: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight:bold
+}
+
+#cardtitle3 {
+    color: #d2bf9d;
+    font-size: 50px;
+    margin-bottom: 5%;
+    text-align: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight:bold
 }
 
 #cardtext {
