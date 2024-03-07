@@ -2,11 +2,13 @@
     border-radius: 50% !important;
     background-color: #e61b29 !important;
     border-color: #e61b29 !important;
-    height: 70% !important;
+    height: 50% !important;
+    width: 100%;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
     padding: 2.5rem;
 }
+
 
