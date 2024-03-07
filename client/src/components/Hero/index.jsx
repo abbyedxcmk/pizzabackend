@@ -17,7 +17,7 @@ function App() {
           <div className="flex justify-center mx-auto">
             <a href="#Menu">
               <button
-                className="bg-color-2 text-white font-bold rounded-full py-4 px-8">
+                className="bg-color-2 text-white fw-bold  rounded-full py-4 px-8">
                 See Our Full Menu
               </button>
             </a>

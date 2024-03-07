@@ -75,6 +75,15 @@
   color: var(--color-2) !important;
 }
 
+.btn-send-message {
+  background-color: var(--color-2) !important;
+  color: var(--color-4) !important;
+}
+.btn-send-message:hover {
+  background-color: var(--color-3) !important;
+  color: var(--color-4) !important;
+}
+
 .btn-feedback {
   background-color: var(--color-3) !important;
   color: var(--color-4) !important;

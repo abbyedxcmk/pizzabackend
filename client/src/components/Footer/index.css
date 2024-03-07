@@ -42,4 +42,9 @@
   margin: 0 10px; 
 }
 
-  
+.social-icon {
+  color: #FFFDF8;
+}
+.social-icon:hover {
+  color: #E7311D;
+}
