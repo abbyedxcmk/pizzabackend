@@ -18,6 +18,7 @@ import registerImg from "../../assets/registerImg.png";
 import logo from "../../assets/OP-1.png";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "../Footer";
 
 const Register = () => {
   const [users, setUsers] = useState({
@@ -37,15 +38,15 @@ const Register = () => {
     e.preventDefault();
     axios
       .post("/api/users", users)
-      .then((response) => console.log(response, users))
+      .then((response) => toast("Welcome!"))
       .catch((err) => toast.error(err.response.data.message));
   };
   return (
     <>
+      <NavBar></NavBar>
       <div className="bgimagecontainer position-absolute">
-        <NavBar></NavBar>
         <ToastContainer />
-        <Container className="w-xl-75 w-sm-100 h-sm-100 bg-secondary rounded bg-color-4 shadow d-lg-flex justify-content-between-lg px-0 vh-lg-75 register-container">
+        <Container className="w-xl-75 w-sm-100 h-sm-100 hm bg-secondary rounded bg-color-4 shadow d-lg-flex justify-content-between-lg px-0 vh-lg-75 register-container">
           <Form className="p-4 rounded registerForm" onSubmit={handleSubmit}>
             <Image src={logo} className="logo"></Image>
             <Form.Group controlId="formEmail" className="mb-3">
@@ -73,7 +74,7 @@ const Register = () => {
               <Form.Label>Confirm Password</Form.Label>
               <Form.Control
                 type="password"
-                name="confirm-password"
+                name="confirmPassword"
                 onChange={handleInputChange}
               ></Form.Control>
             </Form.Group>
@@ -107,6 +108,7 @@ const Register = () => {
           <Image src={registerImg} className="registerImg rounded"></Image>
         </Container>
       </div>
+      <Footer></Footer>
     </>
   );
 };
