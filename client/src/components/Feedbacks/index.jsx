@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import feedbacksData from '../../feedbacksData.json';
 import FeedbackForm from '../FeedbackForm';
+
 function Feedbacks() {
   const [combinedFeedbacks, setCombinedFeedbacks] = useState([]);
   const [showForm, setShowForm] = useState(false); // State to control form display
   // Function to combine feedbacks from localStorage with feedbacksData
+
   const combineFeedbacks = () => {
     const localStorageFeedbacks = Object.values(localStorage).filter(item => item.startsWith('feedback_')).map(item => JSON.parse(item));
     const allFeedbacks = [...feedbacksData, ...localStorageFeedbacks];
@@ -16,19 +18,23 @@ function Feedbacks() {
     );
     setCombinedFeedbacks(uniqueFeedbacks);
   };
+
   // Updates the combined list of feedbacks every time the page is loaded
   useEffect(() => {
     combineFeedbacks();
   }, []);
+
   const handleAddFeedback = (newFeedback) => {
     // Logic for adding new feedback to your feedback list
     console.log('Novo feedback:', newFeedback);
     // Adds the new feedback to the combined feedback list
     setCombinedFeedbacks(prevFeedbacks => [...prevFeedbacks, newFeedback]);
   };
+  
   const toggleFormVisibility = () => {
     setShowForm(!showForm); // Toggle between showing and hiding the form
   };
+
   return (
     <div id="Feedbacks" className='container-fluid p-5 bg-color-2'>
       <div className='row mb-4 ps-md-5 ps-lg-0'>
@@ -51,4 +57,5 @@ function Feedbacks() {
     </div>
   );
 };
+
 export default Feedbacks;

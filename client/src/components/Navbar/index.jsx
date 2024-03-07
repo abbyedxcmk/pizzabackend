@@ -16,7 +16,7 @@ function NavBar() {
       .catch((err) => toast.error(err.response.data.message));
   };
   return (
-    <Navbar expand="lg" className="bg-body-tertiary bg-danger">
+    <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <Navbar.Brand as={Link} to="/" className="text-light">
           Slice and Sizzle
@@ -24,16 +24,16 @@ function NavBar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#superSellers" className="text-light">
+            <Nav.Link href="#Supersellers" className="text-light">
               Supersellers
             </Nav.Link>
-            <Nav.Link href="#menu" className="text-light">
+            <Nav.Link href="#Menu" className="text-light">
               Menu
             </Nav.Link>
-            <Nav.Link href="#yourOrder" className="text-light">
+            <Nav.Link href="#Order" className="text-light">
               Your Order
             </Nav.Link>
-            <Nav.Link href="#reviews" className="text-light">
+            <Nav.Link href="#Feedbacks" className="text-light">
               Customer Reviews
             </Nav.Link>
           </Nav>

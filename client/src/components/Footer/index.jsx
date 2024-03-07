@@ -12,17 +12,17 @@ function Footer() {
     <footer className="footer bg-color-1">
       <div className="social-icons-container">
         <a href="https://www.facebook.com/" target="_blank">
-          <FontAwesomeIcon icon={faFacebook} />
+          <FontAwesomeIcon icon={faFacebook} className="social-icon" />
         </a>
         <a href="https://www.twitter.com/" target="_blank">
-          <FontAwesomeIcon icon={faTwitter} />
+          <FontAwesomeIcon icon={faTwitter} className="social-icon" />
         </a>
         <a href="https://www.instagram.com/" target="_blank">
-          <FontAwesomeIcon icon={faInstagram} />
+          <FontAwesomeIcon icon={faInstagram} className="social-icon" />
         </a>
       </div>
       <p className="footer bg-color-1">
-        &copy; 2024 Food Delivery Website. All rights reserved.
+        &copy; 2024 Slice & Sizzle. All Rights Reserved.
       </p>
     </footer>
   );

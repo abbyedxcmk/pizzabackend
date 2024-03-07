@@ -9,7 +9,7 @@ import './index.css';
 function GroupExample() {
   return (
 
-    <CardGroup id="cards">
+    <CardGroup id='Supersellers' className="cards">
       <Card id="card1">
         <Card.Img variant="top" src={superseller1} />
         <Card.Body>

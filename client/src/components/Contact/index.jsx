@@ -38,9 +38,11 @@ const Contact = () => {
   };
 
   return (
-    <div>
-      <h2>Contact Us</h2>
-      <form onSubmit={handleSubmit} className='contactForm'>
+    <div id="Contact" className='container-fluid p-3 bg-color-4'>
+      <div className='row mb-4 ps-md-5 ps-lg-0'>
+        <h2 className='display-5 color-2 fw-bold'>Contact Us</h2>
+      </div>
+      <form onSubmit={handleSubmit} className='contactForm shadow-lg p-3 mb-5 bg-body rounded'>
         <label htmlFor="name">Name:</label>
         <input
           type="text"
@@ -67,7 +69,7 @@ const Contact = () => {
           required
         ></textarea>
 
-        <button type="submit">Send Message</button>
+        <button className='btn-send-message mt-3' type="submit">Send Message</button>
       </form>
     </div>
   );

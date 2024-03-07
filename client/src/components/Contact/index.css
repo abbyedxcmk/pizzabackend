@@ -30,18 +30,12 @@ textarea {
 
 /* Styling for the button */
 button {
-  background-color: #007bff;
-  color: #0f0e0e;
   padding: 10px 15px;
   border: 1px solid;
   border-radius: 10px;
   cursor: pointer;
   width: 160px;
 
-}
-
-button hover{
-  background-color: #007bff;
 }
 
 /* Styling for the heading */
