@@ -1,50 +1,51 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
-import superseller1 from "../../assets/pizza-images/01.png";
-import superseller2 from "../../assets/pizza-images/02.png";
-import superseller3 from "../../assets/pizza-images/03.png";
 import './index.css';
 
-function GroupExample() {
+function Supersellers() {
   return (
+    <div className="container-fluid p-5">
+      <div className='row mb-4 ps-md-5 ps-lg-0'>
+        <h2 className='display-5 color-2 fw-bold'>Supersellers</h2>
+      </div>
+      <div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-5">
+        <div className="col py-3">
+          <div className="card supersellers-height rounded-3 border border-3 border-dark bg-color-3">
+            <div className="card-header border-bottom border-3 border-dark p-4">
+              <img src="https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/03.png?raw=true" className='img-fluid mx-auto d-block mb-3' alt=""></img>
+            </div>
+            <div className="card-body p-4 pb-2 bg-color-1">
+              <h2 className="supersellers-h2 display-3 fw-bold text-white w-100 py-3">DIAVOLA</h2>
+            </div>
+          </div>
+        </div>
 
-    <CardGroup id="cards">
-      <Card id="card1">
-        <Card.Img variant="top" src={superseller1} />
-        <Card.Body>
-          <Card.Title id="cardtitle">Superseller 1</Card.Title>
-          <Card.Text id="cardtext">
-            Info
-          </Card.Text>
-        </Card.Body>
-      </Card>
-      
-      <Card id="card2">
-        <Card.Img variant="top" src={superseller2} />
-        <Card.Body>
-          <Card.Title id="cardtitle">Superseller 2</Card.Title>
-          <Card.Text id="cardtext">
-            Info
-          </Card.Text>
-        </Card.Body>
-      </Card>
+        <div className="col py-3">
+          <div className="card supersellers-height rounded-3 border border-3 border-dark">
+            <div className="card-header border-bottom border-3 border-dark p-4">
+              <img src="https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/01.png?raw=true" className='img-fluid mx-auto d-block mb-3' alt=""></img>
+            </div>
+            <div className="card-body p-4 pb-2 bg-color-1">
+              <h2 className="supersellers-h2 display-3 fw-bold text-white w-100 py-3">MARGHERITA</h2>
+            </div>
+          </div>
+        </div>
 
-      <Card id="card3">
-        <Card.Img variant="top" src={superseller3} />
-        <Card.Body>
-          <Card.Title id="cardtitle">Superseller 3</Card.Title>
-          <Card.Text id="cardtext"> 
-            Info
-          </Card.Text>
-        </Card.Body>
-        
-      </Card>
-    </CardGroup>
-
+        <div className="col py-3">
+          <div className="card supersellers-height rounded-3 border border-3 border-dark bg-color-2">
+            <div className="card-header border-bottom border-3 border-dark p-4">
+              <img src="https://github.com/abbyedxcmk/pizzabackend/blob/main/client/src/assets/pizza-images/05.png?raw=true" className='img-fluid mx-auto d-block mb-3' alt=""></img>
+            </div>
+            <div className="card-body p-4 pb-2 bg-color-1">
+              <h2 className="supersellers-h2 display-3 fw-bold text-white w-100 py-3">CAPRICCIOSA</h2>
+            </div>
+            <div id="Menu"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
-export default GroupExample;
+export default Supersellers;
 
 

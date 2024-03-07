@@ -5,8 +5,8 @@ import FeedbackForm from '../FeedbackForm';
 function Feedbacks() {
   const [combinedFeedbacks, setCombinedFeedbacks] = useState([]);
   const [showForm, setShowForm] = useState(false); // State to control form display
-
   // Function to combine feedbacks from localStorage with feedbacksData
+
   const combineFeedbacks = () => {
     const localStorageFeedbacks = Object.values(localStorage).filter(item => item.startsWith('feedback_')).map(item => JSON.parse(item));
     const allFeedbacks = [...feedbacksData, ...localStorageFeedbacks];
@@ -30,15 +30,15 @@ function Feedbacks() {
     // Adds the new feedback to the combined feedback list
     setCombinedFeedbacks(prevFeedbacks => [...prevFeedbacks, newFeedback]);
   };
-
+  
   const toggleFormVisibility = () => {
     setShowForm(!showForm); // Toggle between showing and hiding the form
   };
 
   return (
-    <div id="Feedbacks" className='container-fluid p-5 bg-color-2'>
+    <div className='container-fluid p-5 bg-color-2'>
       <div className='row mb-4 ps-md-5 ps-lg-0'>
-        <h2 className='display-5 color-4 fw-bold'>Customers Feedbacks</h2>
+        <h2 className='display-5 color-4 fw-bold'>Customers Feedback</h2>
       </div>
       <div className='row gap-5 px-md-5 px-lg-0'>
         {combinedFeedbacks.map((feedback) => (
