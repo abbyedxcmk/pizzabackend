@@ -13,30 +13,30 @@ function GroupExample() {
       <Card id="card1">
         <Card.Img variant="top" src={superseller1} />
         <Card.Body>
-          <Card.Title id="cardtitle">Superseller 1</Card.Title>
-          <Card.Text id="cardtext">
+          <Card.Title id="cardtitle">Margherita</Card.Title>
+          {/* <Card.Text id="cardtext">
             Info
-          </Card.Text>
+          </Card.Text> */}
         </Card.Body>
       </Card>
       
       <Card id="card2">
         <Card.Img variant="top" src={superseller2} />
         <Card.Body>
-          <Card.Title id="cardtitle">Superseller 2</Card.Title>
-          <Card.Text id="cardtext">
+          <Card.Title id="cardtitle">Fiorentina</Card.Title>
+          {/* <Card.Text id="cardtext">
             Info
-          </Card.Text>
+          </Card.Text> */}
         </Card.Body>
       </Card>
 
       <Card id="card3">
         <Card.Img variant="top" src={superseller3} />
         <Card.Body>
-          <Card.Title id="cardtitle">Superseller 3</Card.Title>
-          <Card.Text id="cardtext"> 
+          <Card.Title id="cardtitle">Diavola</Card.Title>
+          {/* <Card.Text id="cardtext"> 
             Info
-          </Card.Text>
+          </Card.Text> */}
         </Card.Body>
         
       </Card>
