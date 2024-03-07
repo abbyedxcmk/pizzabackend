@@ -9,6 +9,7 @@ import "./index.css";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "../Footer";
 
 const Login = () => {
   const [users, setUsers] = useState({
@@ -39,8 +40,8 @@ const Login = () => {
   };
   return (
     <>
+      <NavBar></NavBar>
       <div className="bgimagecontainer position-absolute">
-        <NavBar></NavBar>
         <ToastContainer></ToastContainer>
         <Container className="bg-color-4 rounded w-xxl-25 w-sm-100 md-w-25 sm-h-100 p-5 shadow loginContainer">
           <h1 className="text-center pb-3 mb-3">Login</h1>
@@ -75,6 +76,7 @@ const Login = () => {
           </p>
         </Container>
       </div>
+      <Footer></Footer>
     </>
   );
 };

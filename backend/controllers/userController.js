@@ -40,11 +40,16 @@ const Login = async (req, res, next) => {
 
 // POST ---> Register User /api/users
 const Register = async (req, res, next) => {
-  const { email, password } = req.body;
+  const { email, password, confirmPassword } = req.body;
   try {
     if (!email || !password) {
       res.status(403);
       throw new Error("Please enter an email and password");
+    }
+    //check passwords match
+    if (password !== confirmPassword) {
+      res.status(403);
+      throw new Error("Passwords do not match!");
     }
     //check if user already exists
     let { data, error } = await db.from("User").select("*");
