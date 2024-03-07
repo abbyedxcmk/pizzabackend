@@ -11,10 +11,10 @@ function App() {
     }} >
       <div className="container d-flex align-items-center h-100">
         <div className="d-flex mx-auto flex-column align-items-center">
-          <img src={Logo} className='img-fluid p-5'></img>
+          <img src={Logo} id='logo' className='col-md-10 img-fluid p-5'></img>
           <a href="#Menu">
             <button
-              className="bg-color-2 text-white fw-bold rounded-full">
+              className="bg-color-2 text-white w-100 fw-bold rounded-full">
               See Our Full Menu
             </button>
           </a>
