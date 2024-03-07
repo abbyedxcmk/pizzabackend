@@ -3,11 +3,17 @@
     background-color: #e61b29 !important;
     border-color: #e61b29 !important;
     height: 70% !important;
+    width: 100%;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
     font-style: normal;
     font-size: 25px;
     padding: 2.5rem;
+}
+
+.img-fluid {
+    height: 60%;
+    width: 50%;
 }
 
 
