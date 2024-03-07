@@ -4,7 +4,6 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import NotFound from "./components/NotFound";
 import "./App.css";
-import Supersellers from "./components/Supersellers";
 
 function App() {
   return (
