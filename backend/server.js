@@ -18,6 +18,6 @@ app.use(notFound);
 app.use(errorHandler);
 app.use(cors());
 
-app.get("/", (req, res) => res.send("Server is ready!"));
+app.all("/", (req, res) => res.send("Server is ready!"));
 
 app.listen(port, () => console.log(`Server started at port ${port}`));
