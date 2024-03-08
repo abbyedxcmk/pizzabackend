@@ -6,6 +6,7 @@ import generateToken from "../utils/generateToken.js";
 //route POST /api/users/login
 const Login = async (req, res, next) => {
   const { email, password } = req.body;
+  console.log(req);
   try {
     //check for email
     if (!email) {
