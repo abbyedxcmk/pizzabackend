@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import userRoutes from "./routes/userRoutes.js";
 import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import pizzaRoutes from "./routes/pizzaRoutes.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use("/api/users", userRoutes);
 app.use("/api", pizzaRoutes);
 app.use(notFound);
 app.use(errorHandler);
+app.use(cors());
 
 app.get("/", (req, res) => res.send("Server is ready!"));
 
