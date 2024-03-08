@@ -49,7 +49,7 @@ The Slice and Sizzle pizza ordering application uses REACT, bootstrap, and a bac
 ## [Mock-Up](#mock-up)
 
 
-* [Deployed App](https://sliceandsizzle.netlify.app)
+* [Deployed App](https://sliceandsizzlepizzas.netlify.app/)
 
 * [Project Repo](https://github.com/abbyedxcmk/pizzabackend)
 
